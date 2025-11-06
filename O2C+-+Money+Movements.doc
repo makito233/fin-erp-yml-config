@@ -1,0 +1,938 @@
+Date: Wed, 5 Nov 2025 08:42:58 +0000 (UTC)
+Message-ID: <254827541.1.1762332178480@f24acda28625>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_0_558326292.1762332178463"
+
+------=_Part_0_558326292.1762332178463
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>O2C - Money Movements</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>O2C - Money Movements</h1>
+    <div class=3D"Section1">
+        <h1 id=3D"O2C-MoneyMovements-=F0=9F=93=96WhatisaMoneyMovement?">=F0=
+=9F=93=96 What is a Money Movement?</h1>
+<p>A <strong>Money Movement</strong> represents any financial transaction i=
+n the Glovo platform ecosystem. It tracks the flow of money between differe=
+nt actors (customers, partners/stores, couriers, and Glovo itself).</p>
+<p>Each money movement defines:</p>
+<ul>
+<li>
+<p><strong>Who pays</strong> (the source actor)</p></li>
+<li>
+<p><strong>Who receives</strong> (the destination actor)</p></li>
+<li>
+<p><strong>What type of transaction</strong> it is (delivery fee, commissio=
+n, tip, etc.)</p></li>
+<li>
+<p><strong>The amount type</strong> (gross or net)</p></li>
+</ul>
+<p>Money movements are the foundation of the O2C (Order-to-Cash) Invoicing =
+Platform, ensuring accurate tracking of all financial flows for billing, in=
+voicing, and accounting purposes.</p>
+<hr>
+<p>=F0=9F=93=9D <strong>Auto-Generated Documentation</strong>: This page is=
+ automatically generated from the <a class=3D"external-link" href=3D"https:=
+//github.com/Glovo/fintech-jvm-common/blob/main/invoicing-platform-core/src=
+/main/kotlin/com/glovoapp/invoicingplatform/core/domain/MoneyMovementDefini=
+tion.kt" rel=3D"nofollow">MoneyMovementDefinition.kt</a> code. Any changes =
+to money movements should be made in the code, and this documentation will =
+update automatically.</p>
+<hr>
+<h1 id=3D"O2C-MoneyMovements-=F0=9F=93=8BCompleteListofMoneyMovements">=F0=
+=9F=93=8B Complete List of Money Movements</h1>
+<p>Below is the detailed breakdown of all money movements in the platform, =
+organized by money flow direction.</p>
+<h2 id=3D"O2C-MoneyMovements-=F0=9F=9B=B5COURIER=E2=9E=9C=F0=9F=8E=88GLOVO"=
+>=F0=9F=9B=B5 COURIER =E2=9E=9C =F0=9F=8E=88 GLOVO</h2>
+<p>The following money movements represent transactions where <strong>COURI=
+ER pays</strong> and <strong>GLOVO receives</strong>:</p>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2ACTIVATION_FEE_BY_COURIER">=F0=9F=
+=9F=A2 ACTIVATION_FEE_BY_COURIER</h3>
+<p>One-time activation fee charged when courier joins the Glovo platform. E=
+xample: New courier pays =E2=82=AC25 activation fee when onboarding.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2CASH_COLLECTED_BY_COURIER">=F0=9F=
+=9F=A2 CASH_COLLECTED_BY_COURIER</h3>
+<p>Cash collected by courier from customers on behalf of Glovo (cash-on-del=
+ivery orders). Courier must remit this to Glovo. Example: Courier collected=
+ =E2=82=AC150 in cash from cash-on-delivery orders.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2CASH_OUT_BY_COURIER">=F0=9F=9F=A2 =
+CASH_OUT_BY_COURIER</h3>
+<p>Records cash earnings already paid to courier, reducing their balance. A=
+mount comes in as negative and is converted to positive. Business DateTime =
+is creation time minus 1 day. Example: Courier was paid =E2=82=AC200 in cas=
+h, balance is reduced by =E2=82=AC200.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2FRAUD_BY_COURIER">=F0=9F=9F=A2 FRA=
+UD_BY_COURIER</h3>
+<p>Charges to courier for fraudulent activities detected on their account. =
+Example: Courier charged =E2=82=AC50 for fraudulently marking orders as del=
+ivered without delivering them.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2MATERIAL_FEE_BY_COURIER">=F0=9F=9F=
+=A2 MATERIAL_FEE_BY_COURIER</h3>
+<p>Fee charged to couriers for physical materials and equipment provided by=
+ Glovo. Example: Courier pays =E2=82=AC30 for insulated delivery bag.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PLATFORM_FEE_BY_COURIER">=F0=9F=9F=
+=A2 PLATFORM_FEE_BY_COURIER</h3>
+<p>Platform usage fee charged to couriers for using Glovo's infrastructure =
+and courier app. Example: Courier pays =E2=82=AC10 weekly platform fee.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRODUCT_INCIDENTS_BY_COURIER">=F0=
+=9F=9F=A2 PRODUCT_INCIDENTS_BY_COURIER</h3>
+<p>Charges to courier for product-related incidents caused by the courier. =
+Example: Courier damaged =E2=82=AC15 worth of products during delivery and =
+is charged for it.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2SALES_FEE_BY_COURIER">=F0=9F=9F=A2=
+ SALES_FEE_BY_COURIER</h3>
+<p>Sales-based fee charged to couriers based on delivery volume or earnings=
+. Example: Courier pays 2% sales fee on =E2=82=AC500 weekly earnings =3D =
+=E2=82=AC10.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h2 id=3D"O2C-MoneyMovements-=F0=9F=91=A4CUSTOMER=E2=9E=9C=F0=9F=8E=88GLOVO=
+">=F0=9F=91=A4 CUSTOMER =E2=9E=9C =F0=9F=8E=88 GLOVO</h2>
+<p>The following money movements represent transactions where <strong>CUSTO=
+MER pays</strong> and <strong>GLOVO receives</strong>:</p>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2BAD_WEATHER_SURCHARGE_BY_CUSTOMER"=
+>=F0=9F=9F=A2 BAD_WEATHER_SURCHARGE_BY_CUSTOMER</h3>
+<p>Extra fee charged to customers during bad weather (rain, snow, etc.) to =
+compensate for difficult delivery conditions. Example: During a heavy rains=
+torm, a =E2=82=AC2 bad weather surcharge is added to the order.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2DELIVERY_FEE_BY_CUSTOMER">=F0=9F=
+=9F=A2 DELIVERY_FEE_BY_CUSTOMER</h3>
+<p>Delivery fee paid by customer for order delivery. Includes surge fees du=
+ring high demand. Example: Delivery fee =E2=82=AC3.50 + surge fee =E2=82=AC=
+0.50 =3D =E2=82=AC4.00 total. Set to zero for PICKUP orders.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2MINIMUM_BASKET_SURCHARGE_BY_CUSTOM=
+ER">=F0=9F=9F=A2 MINIMUM_BASKET_SURCHARGE_BY_CUSTOMER</h3>
+<p>Fee charged when order value is below the store's minimum basket require=
+ment. Example: Store requires minimum =E2=82=AC15 order, customer orders =
+=E2=82=AC12 worth of items, =E2=82=AC3 surcharge is added.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRICING_SERVICE_FEE_BY_CUSTOMER">=
+=F0=9F=9F=A2 PRICING_SERVICE_FEE_BY_CUSTOMER</h3>
+<p>Service fee charged by Glovo for providing the platform and service. Exa=
+mple: Glovo charges =E2=82=AC1.50 service fee for processing and facilitati=
+ng the order. Set to zero for PICKUP orders.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRODUCTS_BY_CUSTOMER">=F0=9F=9F=A2=
+ PRODUCTS_BY_CUSTOMER</h3>
+<p>The cost of products/items that the customer ordered. Example: Customer =
+orders groceries worth =E2=82=AC50. Set to zero for PICKUP orders and speci=
+al order types (REORDER_COMPENSATION, REORDER, REMAKE, SPLIT, RESCUE).</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2TIP_BY_CUSTOMER">=F0=9F=9F=A2 TIP_=
+BY_CUSTOMER</h3>
+<p>Optional tip paid by customer for the courier (Glovo later transfers to =
+courier). Example: Customer adds =E2=82=AC2 tip for the courier who deliver=
+ed their food. Only created if customer chooses to tip.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRIME_SUBSCRIPTION_BY_CUSTOMER">=
+=F0=9F=9F=A2 PRIME_SUBSCRIPTION_BY_CUSTOMER</h3>
+<p>Subscription fee customers pay for Glovo Prime membership. Charged perio=
+dically (monthly, annual, etc.) for benefits like free delivery and exclusi=
+ve deals. Example: Customer pays =E2=82=AC5.99/month for Prime membership.<=
+/p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PRIME_SUBSCRIPTION</code></p></li>
+</ul>
+<h2 id=3D"O2C-MoneyMovements-=F0=9F=8E=88GLOVO=E2=9E=9C=F0=9F=9B=B5COURIER"=
+>=F0=9F=8E=88 GLOVO =E2=9E=9C =F0=9F=9B=B5 COURIER</h2>
+<p>The following money movements represent transactions where <strong>GLOVO=
+ pays</strong> and <strong>COURIER receives</strong>:</p>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2CHALLENGE_REWARD_TO_COURIER">=F0=
+=9F=9F=A2 CHALLENGE_REWARD_TO_COURIER</h3>
+<p>Bonus payment for completing delivery challenges. Example: Courier compl=
+etes 30 deliveries in a week and receives a =E2=82=AC25 challenge reward.</=
+p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2EXTERNAL_EARNINGS_BONUS_TO_COURIER=
+">=F0=9F=9F=A2 EXTERNAL_EARNINGS_BONUS_TO_COURIER</h3>
+<p>Special one-time bonuses for couriers (promotions, compensation, excepti=
+onal performance). Example: Courier receives =E2=82=AC20 bonus for excellen=
+t customer ratings.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2GUARANTEE_TO_COURIER">=F0=9F=9F=A2=
+ GUARANTEE_TO_COURIER</h3>
+<p>Minimum earnings guarantee payment ensuring couriers earn a minimum amou=
+nt during specific periods. Example: Courier only earned =E2=82=AC40 but ha=
+s a =E2=82=AC60 guarantee, receives =E2=82=AC20 guarantee payment.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2REFERRAL_TO_COURIER">=F0=9F=9F=A2 =
+REFERRAL_TO_COURIER</h3>
+<p>Bonus payment to courier for referring new couriers to Glovo. Incentiviz=
+es courier recruitment. Example: Courier refers a friend who completes firs=
+t 10 deliveries, courier receives =E2=82=AC50 referral bonus.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2TIP_TO_COURIER">=F0=9F=9F=A2 TIP_T=
+O_COURIER</h3>
+<p>Tips transferred to couriers via account entry system. Different from TI=
+P_BY_CUSTOMER (which tracks customer payment). Example: =E2=82=AC3 tip is t=
+ransferred to the courier's account.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2ORDER_EARNINGS_TO_COURIER">=F0=9F=
+=9F=A2 ORDER_EARNINGS_TO_COURIER</h3>
+<p>Payment to courier for completing a delivery (Cost Per Order / CPO). Cal=
+culated based on distance, time, difficulty, and other factors. Example: Co=
+urier delivers an order and earns =E2=82=AC4.50 (base pay =E2=82=AC3.50 + =
+=E2=82=AC1.00 for distance).</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h2 id=3D"O2C-MoneyMovements-=F0=9F=8E=88GLOVO=E2=9E=9C=F0=9F=91=A4CUSTOMER=
+">=F0=9F=8E=88 GLOVO =E2=9E=9C =F0=9F=91=A4 CUSTOMER</h2>
+<p>The following money movements represent transactions where <strong>GLOVO=
+ pays</strong> and <strong>CUSTOMER receives</strong>:</p>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PROMOTION_BAD_WEATHER_SURCHARGE_BY=
+_GLOVO">=F0=9F=9F=A2 PROMOTION_BAD_WEATHER_SURCHARGE_BY_GLOVO</h3>
+<p>Discount on bad weather surcharge sponsored by Glovo. Example: During ba=
+d weather, =E2=82=AC2 surcharge is applied but Glovo runs a promotion cover=
+ing =E2=82=AC1 of it.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PROMOTION_DELIVERY_FEE_BY_GLOVO">=
+=F0=9F=9F=A2 PROMOTION_DELIVERY_FEE_BY_GLOVO</h3>
+<p>Delivery fee discount sponsored by Glovo (or third parties) to the custo=
+mer. Example: 'Free delivery' promotion means Glovo credits back the =E2=82=
+=AC3.50 delivery fee to customer.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PROMOTION_PRODUCT_BY_GLOVO">=F0=9F=
+=9F=A2 PROMOTION_PRODUCT_BY_GLOVO</h3>
+<p>Product discount/promotion sponsored by Glovo to the customer. Example: =
+Glovo offers '20% off' promotion on order, if products cost =E2=82=AC50, Gl=
+ovo gives customer =E2=82=AC10 back.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2REFUND_BY_GLOVO">=F0=9F=9F=A2 REFU=
+ND_BY_GLOVO</h3>
+<p>Money refunded by Glovo to the customer due to order issues (missing ite=
+ms, quality problems, cancellation, etc.). Example: Items were missing from=
+ order, Glovo refunds customer =E2=82=AC8. Can have multiple refunds per or=
+der.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PROMOTION_PRIME_SUBSCRIPTION_BY_GL=
+OVO">=F0=9F=9F=A2 PROMOTION_PRIME_SUBSCRIPTION_BY_GLOVO</h3>
+<p>Promotional discount on Prime subscription sponsored by Glovo. Calculate=
+d as: originalFee - chargedFee. Example: Prime costs =E2=82=AC5.99 but cust=
+omer gets 50% off promotional discount, Glovo credits =E2=82=AC3.00.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PRIME_SUBSCRIPTION</code></p></li>
+</ul>
+<h2 id=3D"O2C-MoneyMovements-=F0=9F=8E=88GLOVO=E2=9E=9C=F0=9F=8F=AASTORE_AD=
+DRESS">=F0=9F=8E=88 GLOVO =E2=9E=9C =F0=9F=8F=AA STORE_ADDRESS</h2>
+<p>The following money movements represent transactions where <strong>GLOVO=
+ pays</strong> and <strong>STORE_ADDRESS receives</strong>:</p>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2BAD_WEATHER_SURCHARGE_TO_PARTNER">=
+=F0=9F=9F=A2 BAD_WEATHER_SURCHARGE_TO_PARTNER</h3>
+<p>Bad weather surcharge collected from customer, transferred from Glovo to=
+ the partner. Example: =E2=82=AC2 bad weather fee charged to customer is pa=
+ssed to the partner.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2DELIVERY_FEE_TO_PARTNER">=F0=9F=9F=
+=A2 DELIVERY_FEE_TO_PARTNER</h3>
+<p>Delivery fee paid from Glovo to partner when partner handles their own d=
+elivery. Example: For orders where partner delivers, Glovo pays the partner=
+ =E2=82=AC3 for the delivery service.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2INCIDENT_COMMISSION_BY_PARTNER">=
+=F0=9F=9F=A2 INCIDENT_COMMISSION_BY_PARTNER</h3>
+<p>Commission refund or adjustment from Glovo to partner due to order incid=
+ents. Used to correct commission when incidents affect the order. Example: =
+Commission adjustment of =E2=82=AC2 returned to partner due to order incide=
+nt.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2INCIDENT_PRODUCTS_AFFECTING_COMMIS=
+SION_BY_PARTNER">=F0=9F=9F=A2 INCIDENT_PRODUCTS_AFFECTING_COMMISSION_BY_PAR=
+TNER</h3>
+<p>Non Taxable. Additional products added due to incidents that increase co=
+mmission calculation. Example: Partner adds =E2=82=AC5 worth of replacement=
+ items due to incident, this increases the amount subject to commission.</p=
+>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2INCIDENT_PRODUCTS_NOT_AFFECTING_CO=
+MMISSION_BY_PARTNER">=F0=9F=9F=A2 INCIDENT_PRODUCTS_NOT_AFFECTING_COMMISSIO=
+N_BY_PARTNER</h3>
+<p>Non Taxable. Additional products added due to incidents that do NOT affe=
+ct commission. Example: Partner adds =E2=82=AC5 replacement items as goodwi=
+ll gesture, no commission charged on this amount.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2MINIMUM_BASKET_SURCHARGE_TO_PARTNE=
+R">=F0=9F=9F=A2 MINIMUM_BASKET_SURCHARGE_TO_PARTNER</h3>
+<p>Minimum basket surcharge transferred from Glovo to partner. Example: The=
+ =E2=82=AC3 minimum basket fee charged to the customer is transferred to th=
+e partner.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRODUCTS_TO_PARTNER">=F0=9F=9F=A2 =
+PRODUCTS_TO_PARTNER</h3>
+<p>Non Taxable. Payment for products sold, transferred from Glovo to the pa=
+rtner. Example: A restaurant sells =E2=82=AC45 worth of food through Glovo,=
+ and Glovo transfers that =E2=82=AC45 to the restaurant. Amount varies base=
+d on order status and cancellation.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2WAITING_TIME_FEE_TAXABLE_REFUND_TO=
+_PARTNER">=F0=9F=9F=A2 WAITING_TIME_FEE_TAXABLE_REFUND_TO_PARTNER</h3>
+<p>Refund of a waiting time fee back to the partner (if charged incorrectly=
+). Example: =E2=82=AC2 waiting time fee was charged by mistake and is refun=
+ded to the partner.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h2 id=3D"O2C-MoneyMovements-=F0=9F=8F=AASTORE_ADDRESS=E2=9E=9C=F0=9F=91=A4=
+CUSTOMER">=F0=9F=8F=AA STORE_ADDRESS =E2=9E=9C =F0=9F=91=A4 CUSTOMER</h2>
+<p>The following money movements represent transactions where <strong>STORE=
+_ADDRESS pays</strong> and <strong>CUSTOMER receives</strong>:</p>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2FLASH_DEAL_PROMOTION_FROM_PARTNER_=
+TO_CUSTOMER">=F0=9F=9F=A2 FLASH_DEAL_PROMOTION_FROM_PARTNER_TO_CUSTOMER</h3=
+>
+<p>Discount on flash deal items, paid by the partner to the customer. Examp=
+le: Partner offers 30% off during flash deal, paying =E2=82=AC6 discount on=
+ a =E2=82=AC20 item.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRODUCTS_REFUND_AFFECTING_COMMISSI=
+ON_BY_PARTNER">=F0=9F=9F=A2 PRODUCTS_REFUND_AFFECTING_COMMISSION_BY_PARTNER=
+</h3>
+<p>Non Taxable. Refund amount charged to the partner that reduces Glovo's c=
+ommission. Example: =E2=82=AC5 refund for missing items reduces both partne=
+r earnings and the commission Glovo charges. Partner setting 'isRefundForgi=
+ven=3Dtrue' determines this affects commission.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRODUCTS_REFUND_NOT_AFFECTING_COMM=
+ISSION_BY_PARTNER">=F0=9F=9F=A2 PRODUCTS_REFUND_NOT_AFFECTING_COMMISSION_BY=
+_PARTNER</h3>
+<p>Refund amount charged to the partner that does NOT reduce Glovo's commis=
+sion. Example: =E2=82=AC5 refund for quality issue, but Glovo still charges=
+ commission on the original amount. Partner setting 'isRefundForgiven=3Dfal=
+se' determines commission is not affected.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PROMOTION_DELIVERY_FEE_BY_PARTNER"=
+>=F0=9F=9F=A2 PROMOTION_DELIVERY_FEE_BY_PARTNER</h3>
+<p>Delivery fee discount sponsored and paid by the partner to reduce the cu=
+stomer's delivery cost. Example: Partner sponsors 'free delivery' and pays =
+=E2=82=AC3 to cover the customer's delivery fee.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PROMOTION_MINIMUM_BASKET_SURCHARGE=
+_BY_PARTNER">=F0=9F=9F=A2 PROMOTION_MINIMUM_BASKET_SURCHARGE_BY_PARTNER</h3=
+>
+<p>Partner-sponsored discount that waives or reduces the minimum basket sur=
+charge for the customer. Example: Partner offers to waive the =E2=82=AC3 mi=
+nimum basket fee for loyal customers.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PROMOTION_PRODUCT_AFFECTING_COMMIS=
+SION_BY_PARTNER">=F0=9F=9F=A2 PROMOTION_PRODUCT_AFFECTING_COMMISSION_BY_PAR=
+TNER</h3>
+<p>Product discount sponsored by partner that reduces the commission partne=
+r pays to Glovo. Example: Partner offers 20% off pizzas (=E2=82=AC10 discou=
+nt), this reduces what Glovo can charge commission on.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PROMOTION_PRODUCT_NOT_AFFECTING_CO=
+MMISSION_BY_PARTNER">=F0=9F=9F=A2 PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSIO=
+N_BY_PARTNER</h3>
+<p>Product discount sponsored by partner that does NOT reduce commission. P=
+artner pays Glovo commission on the original price. Example: Partner offers=
+ promotional discount but still pays commission on full amount.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h2 id=3D"O2C-MoneyMovements-=F0=9F=8F=AASTORE_ADDRESS=E2=9E=9C=F0=9F=8E=88=
+GLOVO">=F0=9F=8F=AA STORE_ADDRESS =E2=9E=9C =F0=9F=8E=88 GLOVO</h2>
+<p>The following money movements represent transactions where <strong>STORE=
+_ADDRESS pays</strong> and <strong>GLOVO receives</strong>:</p>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2MKT_GMO_DEBIT_BY_PARTNER">=F0=9F=
+=9F=A2 MKT_GMO_DEBIT_BY_PARTNER</h3>
+<p>Advertising fees charged to partners for marketing campaigns on the Glov=
+o platform. Example: Partner pays =E2=82=AC50 for sponsored placement at th=
+e top of search results for a week.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ADS_REPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2COMMISSION_BY_PARTNER">=F0=9F=9F=
+=A2 COMMISSION_BY_PARTNER</h3>
+<p>Commission fee Glovo charges the partner for facilitating the sale. Calc=
+ulated as: Commissionable Base =C3=97 Commission Rate. Example: If commissi=
+onable base is =E2=82=AC50 and commission rate is 15%, Glovo charges partne=
+r =E2=82=AC7.50.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2FLASH_DEAL_FEE_FROM_PARTNER_TO_GLO=
+VO">=F0=9F=9F=A2 FLASH_DEAL_FEE_FROM_PARTNER_TO_GLOVO</h3>
+<p>Fee charged to partners when their products are featured in flash deals =
+(limited-time promotions). Calculated as: (1/2 =C3=97 basket size) =E2=80=
+=93 discount. Example: Partner pays =E2=82=AC5 to feature products in a 2-h=
+our flash deal.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRIME_ORDER_VENDOR_FEE_FROM_PARTNE=
+R_TO_GLOVO">=F0=9F=9F=A2 PRIME_ORDER_VENDOR_FEE_FROM_PARTNER_TO_GLOVO</h3>
+<p>Fee charged to partners for orders from Glovo Prime members. Partners co=
+ntribute to the cost of providing Prime member benefits. Example: For a Pri=
+me order, the partner pays =E2=82=AC0.50 as a Prime vendor fee.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRODUCTS_IN_CASH_BY_CUSTOMER_REDUC=
+E_BALANCE_BY_PARTNER">=F0=9F=9F=A2 PRODUCTS_IN_CASH_BY_CUSTOMER_REDUCE_BALA=
+NCE_BY_PARTNER</h3>
+<p>Non Taxable. Products paid in cash by the customer directly to the partn=
+er. Reduces the partner's balance with Glovo. Example: Customer pays =E2=82=
+=AC40 cash to partner for products, partner's balance with Glovo is reduced=
+ by =E2=82=AC40.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRODUCTS_IN_CASH_BY_GLOVO_REDUCE_B=
+ALANCE_BY_PARTNER">=F0=9F=9F=A2 PRODUCTS_IN_CASH_BY_GLOVO_REDUCE_BALANCE_BY=
+_PARTNER</h3>
+<p>Non Taxable. Cash that Glovo paid to the partner on behalf of the custom=
+er (courier delivered cash). Reduces partner's balance with Glovo. Example:=
+ Glovo pays =E2=82=AC30 cash to partner for a customer order, partner's bal=
+ance is reduced by =E2=82=AC30.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PRODUCTS_PAID_WITH_VOUCHER_REDUCE_=
+BALANCE_BY_PARTNER">=F0=9F=9F=A2 PRODUCTS_PAID_WITH_VOUCHER_REDUCE_BALANCE_=
+BY_PARTNER</h3>
+<p>Non Taxable. Products paid with a voucher/gift card by the customer. Red=
+uces partner's balance with Glovo because Glovo redeems the voucher. Exampl=
+e: Customer uses a =E2=82=AC20 gift card, partner's balance with Glovo is r=
+educed by =E2=82=AC20.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2SERVICE_FEE_PAID_IN_CASH_REDUCE_BA=
+LANCE_BY_PARTNER">=F0=9F=9F=A2 SERVICE_FEE_PAID_IN_CASH_REDUCE_BALANCE_BY_P=
+ARTNER</h3>
+<p>Non Taxable. Service fee paid in cash by customer to partner. Reduces pa=
+rtner's balance with Glovo to account for cash received. Example: Customer =
+pays =E2=82=AC1.50 service fee in cash to partner, partner's balance with G=
+lovo is reduced by =E2=82=AC1.50.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2WAITING_TIME_FEE_BY_PARTNER">=F0=
+=9F=9F=A2 WAITING_TIME_FEE_BY_PARTNER</h3>
+<p>Fee charged to partner when courier waits too long for order preparation=
+. Example: Courier waits 15 extra minutes for food to be ready, partner is =
+charged =E2=82=AC2 waiting time fee.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2MATERIAL_FEE_BY_PARTNER">=F0=9F=9F=
+=A2 MATERIAL_FEE_BY_PARTNER</h3>
+<p>Fee charged to partners for materials and supplies provided by Glovo. Ex=
+ample: Partner pays =E2=82=AC50 for branded packaging materials provided by=
+ Glovo.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PARTNER_FEES</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2PLATFORM_FEE_BY_PARTNER">=F0=9F=9F=
+=A2 PLATFORM_FEE_BY_PARTNER</h3>
+<p>Platform usage fee charged to partners for using Glovo's infrastructure =
+and services. Separate from commission, may be fixed or variable per partne=
+r agreement. Example: Partner pays =E2=82=AC10 monthly platform fee for usi=
+ng Glovo's ordering system.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PARTNER_FEES</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2SALES_FEE_BY_PARTNER">=F0=9F=9F=A2=
+ SALES_FEE_BY_PARTNER</h3>
+<p>Sales-based fee charged to partners, separate from commission. Calculate=
+d based on sales volume or other metrics. Example: Partner pays 2% sales fe=
+e on =E2=82=AC1,000 monthly sales volume =3D =E2=82=AC20 sales fee.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PARTNER_FEES</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2SANCTIONS_BY_PARTNER">=F0=9F=9F=A2=
+ SANCTIONS_BY_PARTNER</h3>
+<p>Penalties charged to partners for policy violations or quality issues. S=
+everity varies by violation. Example: Partner charged =E2=82=AC100 sanction=
+ for repeated late order preparation causing customer complaints.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PARTNER_FEES</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2INSTANT_PAYOUTS_ALREADY_PAID_TO_PA=
+RTNER">=F0=9F=9F=A2 INSTANT_PAYOUTS_ALREADY_PAID_TO_PARTNER</h3>
+<p>Records instant payout amount already transferred to partner, reducing t=
+heir balance with Glovo. Example: Partner received =E2=82=AC500 via instant=
+ payout, their balance with Glovo is reduced by =E2=82=AC500.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PAYOUT</code></p></li>
+</ul>
+<h3 id=3D"O2C-MoneyMovements-=F0=9F=9F=A2INSTANT_PAYOUTS_FEE_BY_PARTNER">=
+=F0=9F=9F=A2 INSTANT_PAYOUTS_FEE_BY_PARTNER</h3>
+<p>Fee charged to partners for using instant payout service instead of wait=
+ing for regular payout cycle. Example: Partner pays =E2=82=AC5 fee to get t=
+heir =E2=82=AC500 immediately instead of waiting.</p>
+<ul>
+<li>
+<p><strong>Tax Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PAYOUT</code></p></li>
+</ul>
+    </div>
+</body>
+</html>
+------=_Part_0_558326292.1762332178463--

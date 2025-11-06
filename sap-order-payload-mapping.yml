@@ -1,0 +1,767 @@
+# A configuration file defining the mapping of order data into the SAP order payload format (JSON).
+# Order payload is sent to SAP for invoicing and accounting purposes.
+#
+# Note: '>' converts newlines to spaces, making multi-line expressions more readable.
+
+# Mapped 1:1 to the order payload JSON structure
+# Possible types are:
+# - string: string value mapped as-is and cannot be null.
+# - optional_string: string value that can be null, in which case it will be sent as an empty string.
+# - double: numeric value mapped with format "0.00" and cannot be null.
+# - local_date_time: date-time value mapped with a specific format (e.g. "yyyy/MM/dd") and cannot be null.
+# - optional_local_date_time: date-time value as above that can be null, in which case it will be sent as an empty string.
+# - array: array of objects, with nested itemsMappings defining the structure of each object.
+fieldMappings:
+  countryCode:
+    type: string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #financialSourceCountryCodeValue
+  entity:
+    type: string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          "glovo " + #financialSourceCountryCodeValue
+  orderId:
+    type: string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.orderMetadata.orderCode
+  glovoOrderId:
+    type: string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.orderMetadata.orderId.toString()
+  restaurantId:
+    type: optional_string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.orderMetadata.storeAddressId?.toString()
+  currency:
+    type: string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #currencyCodeValue
+  orderCity:
+    type: string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #cityCodeValue
+  status:
+    type: string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.operation.name().toLowerCase()
+  deliveryServiceProvider:
+    type: string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          {
+            'GEN1': 'Restaurant',
+            'GEN2': 'Glovo',
+            'PICKUP': 'Selfpick'
+          }[#input.orderMetadata.handlingStrategy]
+  orderDate:
+    type: local_date_time
+    format: yyyy/MM/dd
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.orderMetadata.orderCreationTime
+  orderTime:
+    type: local_date_time
+    format: HHmm
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.orderMetadata.orderCreationTime
+  timestamp:
+    type: local_date_time
+    format: yyyyMMddHHmmssSSS
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.processingTime
+  deliveryDate:
+    type: local_date_time
+    format: yyyy/MM/dd
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          #input.orderMetadata.finalStatusDateTime ?: #input.orderMetadata.orderCreationTime
+      - countries: [ 'PL' ]
+        expression: >
+          #input.orderMetadata.orderDispatchingTime ?: #input.orderMetadata.orderCreationTime
+  deliveryTime:
+    type: local_date_time
+    format: HHmm
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          #input.orderMetadata.finalStatusDateTime ?: #input.orderMetadata.orderCreationTime
+      - countries: [ 'PL' ]
+        expression: >
+          #input.orderMetadata.orderDispatchingTime ?: #input.orderMetadata.orderCreationTime
+  expectedDeliveryDate:
+    type: optional_string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          null
+  paymentProvider:
+    type: optional_string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#input.orderMetadata?.payments?.![paymentMethod]?.stream()?.distinct()?.count() ?: 0) > 1 ? 'Mix' : ''
+  orderSubVertical:
+    type: optional_string
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          (
+            (
+              (#input.orderMetadata?.vertical == null)
+              or (#input.orderMetadata?.vertical?.toUpperCase() == 'UNDEFINED')
+              or (#input.orderMetadata?.subvertical == null)
+              or (#input.orderMetadata?.subvertical?.toUpperCase() == 'UNDEFINED')
+            )
+            ? 'UNDEFINED_UNDEFINED'
+            : (#input.orderMetadata?.vertical + '_' + #input.orderMetadata?.subvertical)
+          )
+      - countries: [ 'PL' ]
+        expression: '"UNDEFINED_UNDEFINED"'
+  vendorCancellationStrategy:
+    type: optional_string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.orderMetadata?.partnerCancellationStrategy
+  customerCancellationStrategy:
+    type: optional_string
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.orderMetadata?.customerCancellationStrategy
+  Payments:
+    type: array
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.orderMetadata?.payments
+    itemsMappings:
+      amount:
+        type: double
+        expressionsByCountry:
+          - countries: [ 'ES', 'PL' ]
+            expression: >
+              #item.amount
+      paymentMethod:
+        type: string
+        expressionsByCountry:
+          - countries: [ 'ES', 'PL' ]
+            expression: >
+              (#item.paymentMethod?.toUpperCase() == 'CASH') ? 'offline' : 'online'
+      paymentServiceProvider:
+        type: optional_string
+        expressionsByCountry:
+          - countries: [ 'ES', 'PL' ]
+            expression: >
+              null
+      clearingProvider:
+        type: optional_string
+        expressionsByCountry:
+          - countries: [ 'ES', 'PL' ]
+            expression: >
+              #item.paymentMethod
+
+# Mapped to 'items.condition' array of the order payload, containing conditionType and conditionValue.
+# - conditionType: the key identifying the condition.
+# - conditionValue: the value of the condition, mapped as a double with format "0.00".
+conditionMappings:
+  - conditionType: netTotalOrderValue
+    expressionsByCountry:
+      - countries: ['ES', 'PL']
+        expression: >
+          {
+            'GEN1': (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['TIP_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['MPL_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0)
+              + (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PRICING_SERVICE_FEE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_GLOVO']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_PARTNER']?.netAmount?.value ?: 0)
+            ),
+            'GEN2': (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['TIP_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['DELIVERY_FEE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0)
+              + (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PRICING_SERVICE_FEE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_GLOVO']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_PARTNER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_TO_CUSTOMER']?.netAmount?.value ?: 0)
+            ),
+            'PICKUP': (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_TO_CUSTOMER']?.netAmount?.value ?: 0)
+            )
+          }[#input.orderMetadata?.handlingStrategy] ?: 0
+
+  - conditionType: grossTotalOrderValue
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          {
+            'GEN1': (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['TIP_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['MPL_DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PRICING_SERVICE_FEE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_GLOVO']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_PARTNER']?.grossAmount?.value ?: 0)
+            ),
+            'GEN2': (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['TIP_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['DELIVERY_FEE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PRICING_SERVICE_FEE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_GLOVO']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+            ),
+            'PICKUP': (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+            )
+          }[#input.orderMetadata?.handlingStrategy] ?: 0
+
+  - conditionType: grossFoodValue
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)
+  - conditionType: netFoodValue
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PRODUCTS_TO_PARTNER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossTipValue
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['TIP_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+  - conditionType: netTipValue
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['TIP_TO_CUSTOMER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossServiceFee
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PRICING_SERVICE_FEE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+  - conditionType: netServiceFee
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PRICING_SERVICE_FEE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossDeliveryFee
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0)
+
+  - conditionType: netDeliveryFee
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0)
+
+  - conditionType: grossDeliveryFeeMarketplace
+    expressionsByCountry:
+      - countries: [ 'ES' ,'PL']
+        expression: >
+          #invoicingItems['MPL_DELIVERY_FEE_TO_PARTNER']?.grossAmount?.value ?: 0
+
+  - conditionType: netDeliveryFeeMarketplace
+    expressionsByCountry:
+      - countries: [ 'ES' , 'PL']
+        expression: >
+          #invoicingItems['MPL_DELIVERY_FEE_TO_PARTNER']?.netAmount?.value ?: 0
+
+  - conditionType: grossAdditionalChargeBadWeather
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+
+  - conditionType: netAdditionalChargeBadWeather
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossAdditionalChargeBadWeatherMarketplace
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_PARTNER']?.grossAmount?.value ?: 0) : 0
+
+  - conditionType: netAdditionalChargeBadWeatherMarketplace
+    expressionsByCountry:
+      - countries: [ 'ES' , 'PL']
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_PARTNER']?.netAmount?.value ?: 0) : 0
+
+  - conditionType: grossAdditionalChargeMinBasket
+    expressionsByCountry:
+      - countries: [ 'ES','PL' ]
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+
+  - conditionType: netAdditionalChargeMinBasket
+    expressionsByCountry:
+      - countries: [ 'ES' , 'PL']
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossAdditionalChargeMinBasketMarketplace
+    expressionsByCountry:
+      - countries: [ 'ES' , 'PL']
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? (#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_PARTNER']?.grossAmount?.value ?: 0) : 0
+
+  - conditionType: netAdditionalChargeMinBasketMarketplace
+    expressionsByCountry:
+      - countries: [ 'ES' , 'PL']
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? (#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_PARTNER']?.netAmount?.value ?: 0) : 0
+
+  - conditionType: grossAgentModelRevenue
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: "0.00"
+      - countries: ['PL']
+        expression: >
+          #invoicingItems['DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0
+  - conditionType: netAgentModelRevenue
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: "0.00"
+      - countries: ['PL']
+        expression: >
+          #invoicingItems['DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0
+
+  - conditionType: grossCpo
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          #invoicingItems['ORDER_EARNINGS_BY_COURIER']?.grossAmount?.value ?: 0
+      - countries: [ 'PL' ]
+        expression: "0.00"
+  - conditionType: netCpo
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          #invoicingItems['ORDER_EARNINGS_BY_COURIER']?.netAmount?.value ?: 0
+      - countries: [ 'PL' ]
+        expression: "0.00"
+
+  - conditionType: vats
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: "0.00"
+
+  - conditionType: grossPartnerVoucher
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: "0.00"
+  - conditionType: netPartnerVoucher
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: "0.00"
+
+  - conditionType: grossPlatformVoucher
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: "0.00"
+  - conditionType: netPlatformVoucher
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: "0.00"
+
+  - conditionType: grossPlatformDiscount
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          {
+            'PICKUP': ((#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.grossAmount?.value ?: 0)),
+            'GEN1': (
+              (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+            ),
+            'GEN2': (
+              (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+            )
+          }[#input.orderMetadata?.handlingStrategy] ?: 0
+  - conditionType: netPlatformDiscount
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          {
+            'PICKUP': ((#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.netAmount?.value ?: 0)),
+            'GEN1': (
+              (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+            ),
+            'GEN2': (
+              (#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+            )
+          }[#input.orderMetadata?.handlingStrategy] ?: 0
+
+  - conditionType: grossPartnerDiscount
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+  - conditionType: netPartnerDiscount
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_PARTNER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossPartnerDiscountNoCommission
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+  - conditionType: netPartnerDiscountNoCommission
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_TO_PARTNER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossDeliveryFeeDiscountPlatform
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          {
+            'GEN1': (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0),
+            'GEN2': (
+              (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_GLOVO']?.grossAmount?.value ?: 0)
+            )
+          }[#input.orderMetadata?.handlingStrategy] ?: 0
+  - conditionType: netDeliveryFeeDiscountPlatform
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          {
+            'GEN1': (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0),
+            'GEN2': (
+              (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_GLOVO']?.netAmount?.value ?: 0)
+            )
+          }[#input.orderMetadata?.handlingStrategy] ?: 0
+
+  - conditionType: grossBadWeatherDiscountPlatform
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+  - conditionType: netBadWeatherDiscountPlatform
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+            (#invoicingItems['PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossMinBasketDiscountPlatform
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.grossAmount?.value ?: 0)
+  - conditionType: netMinBasketDiscountPlatform
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossServiceFeeDiscountPlatform
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          0.00
+  - conditionType: netServiceFeeDiscountPlatform
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          0.00
+
+  - conditionType: costOfIncidentsAffectingCommission
+    expressionsByCountry:
+      - countries: [ 'PL' ]
+        expression: >
+            (#invoicingItems['INCIDENT_PRODUCTS_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+  - conditionType: refundsToPartnerAffectingCommission
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+            (#invoicingItems['INCIDENT_PRODUCTS_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+
+  - conditionType: grossDeliveryFeeDiscountVendor
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (
+            (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_PARTNER']?.grossAmount?.value ?: 0)
+            + (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_PARTNER_TAXABLE']?.grossAmount?.value ?: 0)
+          )
+  - conditionType: netDeliveryFeeDiscountVendor
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (
+            (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_PARTNER']?.netAmount?.value ?: 0)
+            + (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_PARTNER_TAXABLE']?.netAmount?.value ?: 0)
+          )
+
+  - conditionType: grossDeliveryFeeDiscountTotal
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          {
+            'GEN1': (
+              (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_PARTNER']?.grossAmount?.value ?: 0)
+            ),
+            'GEN2': (
+              (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_GLOVO']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_PARTNER']?.grossAmount?.value ?: 0)
+            ),
+            'PICKUP': 0
+          }[#input.orderMetadata?.handlingStrategy] ?: 0
+  - conditionType: netDeliveryFeeDiscountTotal
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          {
+            'GEN1': (
+              (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_DELIVERY_FEE_TO_PARTNER']?.netAmount?.value ?: 0)
+            ),
+            'GEN2': (
+              (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_GLOVO']?.netAmount?.value ?: 0)
+              + (#invoicingItems['PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORED_BY_PARTNER']?.netAmount?.value ?: 0)
+            ),
+            'PICKUP': 0
+          }[#input.orderMetadata?.handlingStrategy] ?: 0
+
+  - conditionType: commissionableValue
+    expressionsByCountry:
+      - countries: [ 'PL' ]
+        expression: >
+          (
+            'mcdonalds' == #input.orderMetadata?.partnerFamily?.toLowerCase()
+            ? (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['INCIDENT_PRODUCTS_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PRODUCTS_REFUND_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+            )
+           : (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+            )
+          )
+      - countries: [ 'ES' ]
+        expression: >
+          (
+            'mcdonalds' == #input.orderMetadata?.partnerFamily?.toLowerCase()
+            ? (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['INCIDENT_PRODUCTS_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PRODUCTS_REFUND_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+            )
+           : (
+              (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)
+              + (#invoicingItems['INCIDENT_PRODUCTS_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+              - (#invoicingItems['FLASH_DEAL_FEE_FROM_GLOVO_TO_PARTNER']?.grossAmount?.value ?: 0)
+            )
+          )
+
+  - conditionType: productsAdvancedInCash
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          (
+            (#invoicingItems['PRODUCTS_PAID_IN_CASH_BY_GLOVO_REDUCE_BALANCE_TO_PARTNER']?.grossAmount?.value ?: 0)
+            + (#invoicingItems['PRODUCTS_PAID_IN_CASH_BY_CUSTOMER_REDUCE_BALANCE_TO_PARTNER']?.grossAmount?.value ?: 0)
+          )
+      - countries: [ 'PL' ]
+        expression: >
+          (#invoicingItems['PRODUCTS_PAID_IN_CASH_BY_GLOVO_REDUCE_BALANCE_TO_PARTNER']?.grossAmount?.value ?: 0)
+
+  - conditionType: serviceFeeCashMarketplace
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          #input.shouldIncludeMarketplaceItemsOnly() ? (#invoicingItems['SERVICE_FEE_PAID_IN_CASH_TO_PARTNER']?.grossAmount?.value ?: 0) : 0
+
+  - conditionType: costOfIncidents
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (
+            #input.operation.name().toLowerCase() == 'cancel'
+            ? 0
+            : (
+                (#invoicingItems['PRODUCTS_REFUND_NOT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+                + (#invoicingItems['PRODUCTS_REFUND_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+              )
+          )
+
+  - conditionType: refundsToPartner
+    expressionsByCountry:
+      - countries: ['PL']
+        expression: >
+          ((#invoicingItems['INCIDENT_PRODUCTS_NOT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+           + (#invoicingItems['INCIDENT_PRODUCTS_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+          )
+      - countries: [ 'ES']
+        expression: >
+          (#invoicingItems['INCIDENT_PRODUCTS_NOT_AFFECTING_COMMISSION_TO_PARTNER']?.grossAmount?.value ?: 0)
+
+  - conditionType: courierDeliveryFee
+    expressionsByCountry:
+      - countries: [ 'PL' ]
+        expression: >
+          (#invoicingItems['DELIVERY_FEE_TO_CUSTOMER']?.amount?.value ?: 0)
+      - countries: [ 'ES' ]
+        expression: "0.00"
+
+  - conditionType: netWaitingTimeFee
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['WAITING_TIME_FEE_TO_PARTNER']?.netAmount?.value ?: 0)
+
+  - conditionType: netWaitingTimeFeeRefund
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: >
+          (#invoicingItems['WAITING_TIME_FEE_TAXABLE_REFUND_TO_PARTNER']?.netAmount?.value ?: 0)
+
+  - conditionType: incidentCommissionableValue
+    expressionsByCountry:
+      - countries: [ 'PL' ]
+        expression: >
+          (#invoicingItems['INCIDENT_COMMISSION_TO_PARTNER']?.amount?.value ?: 0)
+
+  - conditionType: paymentProcessingFee
+    expressionsByCountry:
+      - countries: [ 'ES', 'PL' ]
+        expression: "0.00"
+
+  - conditionType: netPrimeOrderVendorFee
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          (#invoicingItems['PRIME_ORDER_VENDOR_FEE_FROM_GLOVO_TO_PARTNER']?.netAmount?.value ?: 0)
+
+  - conditionType: netFlashDealsFee
+    expressionsByCountry:
+      - countries: [ 'ES']
+        expression: >
+          (#invoicingItems['FLASH_DEAL_FEE_FROM_GLOVO_TO_PARTNER']?.netAmount?.value ?: 0)
+
+  - conditionType: grossFlashOfferDiscountVendor
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          (#invoicingItems['FLASH_DEAL_PROMOTION_FROM_GLOVO_TO_PARTNER']?.grossAmount?.value ?: 0)
+
+  - conditionType: netDeliveryFeeOptimised
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          (
+            (#isVatOptimisedOrder)
+            ? ((#invoicingItems['MPL_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0))
+            : 0
+          )
+  - conditionType: netAdditionalChargeMinBasketOptimised
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          (
+            (#isVatOptimisedOrder)
+            ? ((#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0))
+            : 0
+          )
+  - conditionType: netAdditionalChargeBadWeatherOptimised
+    expressionsByCountry:
+      - countries: [ 'ES' ]
+        expression: >
+          (#isVatOptimisedOrder) ? ((#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?: 0)) : 0

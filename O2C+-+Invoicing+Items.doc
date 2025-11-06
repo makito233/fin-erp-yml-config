@@ -1,0 +1,1895 @@
+Date: Wed, 5 Nov 2025 08:43:10 +0000 (UTC)
+Message-ID: <2103528244.9.1762332190489@d5f306e037da>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_8_503015528.1762332190489"
+
+------=_Part_8_503015528.1762332190489
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>O2C - Invoicing Items</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>O2C - Invoicing Items</h1>
+    <div class=3D"Section1">
+        <h1 id=3D"O2C-InvoicingItems-=F0=9F=93=96WhatisanInvoicingItem?">=
+=F0=9F=93=96 What is an Invoicing Item?</h1>
+<p>An <strong>Invoicing Item</strong> represents a line item that appears o=
+n actual invoices issued between actors in the Glovo platform. While Money =
+Movements track the flow of money, Invoicing Items determine what goes on t=
+he official invoices for tax and accounting purposes.</p>
+<p>Each invoicing item defines:</p>
+<ul>
+<li>
+<p><strong>Money flow</strong> (who pays and who receives)</p></li>
+<li>
+<p><strong>Invoice details</strong> (who issues the invoice and who receive=
+s it)</p></li>
+<li>
+<p><strong>Tax treatment</strong> (taxable or non-taxable balance adjustmen=
+t)</p></li>
+<li>
+<p><strong>The amount type</strong> (gross or net)</p></li>
+</ul>
+<p><strong>Key Difference from Money Movements:</strong></p>
+<ul>
+<li>
+<p><strong>Money Movements</strong> =3D Actual money transfers between acto=
+rs</p></li>
+<li>
+<p><strong>Invoicing Items</strong> =3D Line items on invoices (one money m=
+ovement can become multiple invoice items, or multiple money movements can =
+combine into one invoice item)</p></li>
+</ul>
+<p>Invoicing Items are essential for the O2C (Order-to-Cash) Invoicing Plat=
+form to generate legally compliant invoices with proper tax treatment for a=
+ll actors.</p>
+<hr>
+<p>=F0=9F=93=9D <strong>Auto-Generated Documentation</strong>: This page is=
+ automatically generated from the <a class=3D"external-link" href=3D"https:=
+//github.com/Glovo/fintech-jvm-common/blob/main/invoicing-platform-core/src=
+/main/kotlin/com/glovoapp/invoicingplatform/core/domain/InvoicingItemDefini=
+tion.kt" rel=3D"nofollow">InvoicingItemDefinition.kt</a> code. Any changes =
+to invoicing items should be made in the code, and this documentation will =
+update automatically.</p>
+<hr>
+<h1 id=3D"O2C-InvoicingItems-=F0=9F=93=9ABusinessModels-QuickReference">=F0=
+=9F=93=9A Business Models - Quick Reference</h1>
+<p>Throughout this documentation, you'll see references to different <stron=
+g>business models</strong> (BM). These determine how invoicing works in dif=
+ferent countries and scenarios:</p>
+<p><strong>Business Models:</strong></p>
+<ul>
+<li>
+<p><strong>Default/BM1/BM8:</strong> Standard models where Glovo handles al=
+l invoicing. Riders always bill Glovo, customers always get invoices from G=
+lovo. Straightforward flows.</p></li>
+<li>
+<p><strong>BM2/BM5:</strong> Rider-direct models where riders invoice custo=
+mers directly for delivery fees. Complex calculations split delivery costs =
+and promotions between rider, Glovo, and customer.</p></li>
+<li>
+<p><strong>BM4:</strong> Special model for flexible rider cost distribution=
+. Riders may invoice customers directly, AND remaining rider costs (CPO =E2=
+=80=94 cost per order) can be passed to vendors=E2=80=94either directly or =
+through Glovo. Includes special service fees and balance adjustments.</p></=
+li>
+</ul>
+<hr>
+<h1 id=3D"O2C-InvoicingItems-=F0=9F=93=8BCompleteListofInvoicingItems">=F0=
+=9F=93=8B Complete List of Invoicing Items</h1>
+<p>Below is the detailed breakdown of all invoicing items in the platform, =
+organized by money flow direction.</p>
+<h2 id=3D"O2C-InvoicingItems-=F0=9F=8E=88GLOVOissuesto=F0=9F=9B=B5COURIER">=
+=F0=9F=8E=88 GLOVO issues to =F0=9F=9B=B5 COURIER</h2>
+<p>The following invoicing items are issued to <strong>COURIER</strong> by =
+<strong>GLOVO</strong>:</p>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1ACTIVATION_FEE_TO_COURIER">=F0=9F=
+=9F=A1 ACTIVATION_FEE_TO_COURIER</h3>
+<p>Glovo charges courier a one-time activation fee when joining the platfor=
+m. Comes from ACTIVATION_FEE_BY_COURIER money movement (same amount). Taxab=
+le. Example: New courier pays =E2=82=AC25 to activate their account.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MATERIAL_FEE_TO_COURIER">=F0=9F=9F=
+=A1 MATERIAL_FEE_TO_COURIER</h3>
+<p>Glovo charges courier for materials and equipment provided (delivery bag=
+s, branded clothing, etc.). Comes from MATERIAL_FEE_BY_COURIER money moveme=
+nt (same amount). Taxable. Example: Courier pays =E2=82=AC30 for insulated =
+delivery bag.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PLATFORM_FEE_TO_COURIER">=F0=9F=9F=
+=A1 PLATFORM_FEE_TO_COURIER</h3>
+<p>Glovo charges courier a platform usage fee for using the courier app and=
+ infrastructure. Comes from PLATFORM_FEE_BY_COURIER money movement (same am=
+ount). Taxable. Example: Courier pays =E2=82=AC10 weekly to use Glovo couri=
+er app.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1SALES_FEE_TO_COURIER">=F0=9F=9F=A1=
+ SALES_FEE_TO_COURIER</h3>
+<p>Glovo charges courier a sales-based fee on their delivery volume or earn=
+ings. Comes from SALES_FEE_BY_COURIER money movement (same amount). Taxable=
+. Example: Courier pays =E2=82=AC10 for 2% sales fee on =E2=82=AC500 weekly=
+ earnings.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1OTHER_ADJUSTMENT_TO_COURIER">=F0=
+=9F=9F=A1 OTHER_ADJUSTMENT_TO_COURIER</h3>
+<p>MANUAL IMPORT via CSV: Glovo credits courier for various manual adjustme=
+nts (debt settlements, corrections, compensations, etc.). Not from automate=
+d money movements. Non-taxable balance. Used when operators need to manuall=
+y adjust courier accounts to settle debts or correct errors.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_TO_COURIER"=
+>=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_TO_COURIER</h3>
+<p>Glovo compensates courier for a delivery fee promotion. When promotion a=
+ffects courier's earnings, we split PROMOTION_DELIVERY_FEE_BY_GLOVO money m=
+ovement into multiple invoicing items - this one compensates the courier. N=
+on-taxable balance.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h2 id=3D"O2C-InvoicingItems-=F0=9F=9B=B5COURIERissuesto=F0=9F=91=A4CUSTOME=
+R">=F0=9F=9B=B5 COURIER issues to =F0=9F=91=A4 CUSTOMER</h2>
+<p>The following invoicing items are issued to <strong>CUSTOMER</strong> by=
+ <strong>COURIER</strong>:</p>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1DELIVERY_FEE_TO_CUSTOMER">=F0=9F=
+=9F=A1 DELIVERY_FEE_TO_CUSTOMER</h3>
+<p>Delivery fee the courier bills directly to the customer. Taxable. Only u=
+sed in business models BM2/BM4/BM5 where couriers invoice customers directl=
+y (GEN2 models). The amount depends on what the customer paid vs what the c=
+ourier earned: if the courier's payment (CPO) is less than customer's deliv=
+ery fees, the courier invoices the customer for their portion. Example: Cou=
+rier bills customer =E2=82=AC3.50 directly for delivery service.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1DELIVERY_FEE_TO_GLOVO">=F0=9F=9F=
+=A1 DELIVERY_FEE_TO_GLOVO</h3>
+<p>Internal accounting entry to balance the money flow when customer pays d=
+elivery fees but courier gets the earnings. Non-taxable (just balancing the=
+ books). Only used in BM2/BM4/BM5. The amount ensures all the money flows a=
+dd up correctly between customer, courier, and Glovo. This doesn't result i=
+n a real invoice sent to anyone - it's purely for internal accounting. Exam=
+ple: Helps balance when customer paid =E2=82=AC4 delivery fee and courier e=
+arned =E2=82=AC3.50.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_BY_COURIER"=
+>=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_BY_COURIER</h3>
+<p>Delivery fee discount courier passes to customer. Non-taxable balance. U=
+sed in BM2/BM5 when total promotions exceed what courier would have charged=
+. The amount is calculated to balance out the promotion flows between Glovo=
+, courier, and customer. Example: -=E2=82=AC2 discount shows on courier's i=
+nvoice to customer.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_BY_COURIER_=
+SPONSORED_BY_GLOVO">=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSORE=
+D_BY_GLOVO</h3>
+<p>Glovo-sponsored delivery discount that courier passes to customer. Non-t=
+axable balance. Only used in BM5. Glovo pays for the promotion, courier sho=
+ws it on their invoice to customer. Example: -=E2=82=AC2 Glovo-funded disco=
+unt on courier's invoice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_BY_COURIER_=
+SPONSORED_BY_PARTNER">=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_BY_COURIER_SPONSO=
+RED_BY_PARTNER</h3>
+<p>Partner-sponsored delivery discount that courier passes to customer. Non=
+-taxable balance. Only used in BM5. Partner pays for the promotion, courier=
+ shows it on their invoice to customer. Example: -=E2=82=AC1.50 partner-fun=
+ded discount on courier's invoice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h2 id=3D"O2C-InvoicingItems-=F0=9F=8E=88GLOVOissuesto=F0=9F=91=A4CUSTOMER"=
+>=F0=9F=8E=88 GLOVO issues to =F0=9F=91=A4 CUSTOMER</h2>
+<p>The following invoicing items are issued to <strong>CUSTOMER</strong> by=
+ <strong>GLOVO</strong>:</p>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1BAD_WEATHER_SURCHARGE_TO_CUSTOMER"=
+>=F0=9F=9F=A1 BAD_WEATHER_SURCHARGE_TO_CUSTOMER</h3>
+<p>Extra fee Glovo charges customer for deliveries during bad weather. Taxa=
+ble. Comes directly from BAD_WEATHER_SURCHARGE_BY_CUSTOMER money movement (=
+same amount). Used across all business models. Example: Customer pays =E2=
+=82=AC2 extra for delivery during rainstorm.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1DELIVERY_FEE_BY_GLOVO">=F0=9F=9F=
+=A1 DELIVERY_FEE_BY_GLOVO</h3>
+<p>Delivery fee Glovo charges the customer, shown on the invoice Glovo issu=
+es to the customer. Taxable. How it's calculated depends on the business mo=
+del: In simpler models (Default/BM1/BM8), it's exactly what the customer pa=
+id in DELIVERY_FEE_BY_CUSTOMER. In courier-direct models (BM2/BM5), Glovo o=
+nly charges for the portion not already invoiced by the courier to the cust=
+omer. In BM4, this isn't used - instead SERVICE_FEE_TO_CUSTOMER is charged.=
+ Example: Customer sees =E2=82=AC4 delivery fee on their Glovo invoice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1FLASH_DEAL_PROMOTION_FROM_GLOVO_TO=
+_CUSTOMER">=F0=9F=9F=A1 FLASH_DEAL_PROMOTION_FROM_GLOVO_TO_CUSTOMER</h3>
+<p>Glovo shows customer the flash deal discount they're receiving. Splits F=
+LASH_DEAL_PROMOTION_FROM_PARTNER_TO_CUSTOMER into two invoicing items. Non-=
+taxable balance. Partner pays Glovo (one invoice), customer sees discount (=
+another invoice). Example: -=E2=82=AC6 flash deal discount.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1GLOVO_BALANCE_DISCOUNT_TO_CUSTOMER=
+">=F0=9F=9F=A1 GLOVO_BALANCE_DISCOUNT_TO_CUSTOMER</h3>
+<p>Discount Glovo gives customer when service fee calculation results in ne=
+gative amount. Taxable. Only used in BM4 without partner. When courier cost=
+s (CPO) exceed what customer paid in delivery fees, the difference becomes =
+a discount to the customer. Example: -=E2=82=AC2 balance discount on custom=
+er invoice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MINIMUM_BASKET_SURCHARGE_TO_CUSTOM=
+ER">=F0=9F=9F=A1 MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER</h3>
+<p>Fee Glovo charges customer when order total is below the minimum basket =
+requirement. Taxable. Comes directly from MINIMUM_BASKET_SURCHARGE_BY_CUSTO=
+MER money movement (same amount). Used across all business models. Example:=
+ Customer orders =E2=82=AC12 but minimum is =E2=82=AC15, so customer pays =
+=E2=82=AC3 surcharge.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MPL_DELIVERY_FEE_BY_GLOVO">=F0=9F=
+=9F=A1 MPL_DELIVERY_FEE_BY_GLOVO</h3>
+<p>Delivery fee Glovo charges customer in marketplace model where partner h=
+andles their own delivery (not Glovo couriers). Non-taxable balance. Comes =
+directly from DELIVERY_FEE_BY_CUSTOMER (same amount). Used in Default busin=
+ess model when order is marketplace. Example: Customer pays =E2=82=AC3 deli=
+very fee that goes to the partner's delivery service.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MPL_DELIVERY_FEE_BY_GLOVO_TAXABLE"=
+>=F0=9F=9F=A1 MPL_DELIVERY_FEE_BY_GLOVO_TAXABLE</h3>
+<p>Delivery fee Glovo charges customer for VAT-optimised Gen 2 cases. Servi=
+ce tax is applied. Example: Customer pays =E2=82=AC3 delivery fee that goes=
+ to the partner's delivery service.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRICING_SERVICE_FEE_TO_CUSTOMER">=
+=F0=9F=9F=A1 PRICING_SERVICE_FEE_TO_CUSTOMER</h3>
+<p>Glovo charges customer a platform service fee. Comes from PRICING_SERVIC=
+E_FEE_BY_CUSTOMER money movement (same amount). Taxable. Example: =E2=82=AC=
+1.50 fee for using the Glovo platform to process the order.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_REFUND_AFFECTING_COMMISSI=
+ON_TO_CUSTOMER">=F0=9F=9F=A1 PRODUCTS_REFUND_AFFECTING_COMMISSION_TO_CUSTOM=
+ER</h3>
+<p>Glovo refunds the customer for product issues. Splits PRODUCTS_REFUND_AF=
+FECTING_COMMISSION_BY_PARTNER into two invoicing items. Non-taxable balance=
+. Partner gets charged (one invoice), customer receives refund (another inv=
+oice).</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_REFUND_NOT_AFFECTING_COMM=
+ISSION_TO_CUSTOMER">=F0=9F=9F=A1 PRODUCTS_REFUND_NOT_AFFECTING_COMMISSION_T=
+O_CUSTOMER</h3>
+<p>Glovo refunds the customer for product issues. Splits PRODUCTS_REFUND_NO=
+T_AFFECTING_COMMISSION_BY_PARTNER into two invoicing items. Non-taxable bal=
+ance. Partner gets charged (one invoice), customer receives refund (another=
+ invoice).</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_TO_CUSTOMER">=F0=9F=9F=A1=
+ PRODUCTS_TO_CUSTOMER</h3>
+<p>Glovo charges customer for products purchased. Comes from PRODUCTS_BY_CU=
+STOMER money movement (same amount). Non-taxable balance. Example: Customer=
+ buys =E2=82=AC50 of groceries, this shows on their Glovo invoice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_BAD_WEATHER_SURCHARGE_TO=
+_CUSTOMER">=F0=9F=9F=A1 PROMOTION_BAD_WEATHER_SURCHARGE_TO_CUSTOMER</h3>
+<p>Glovo gives discount to customer for bad weather surcharge (Glovo-sponso=
+red promotion). Comes from PROMOTION_BAD_WEATHER_SURCHARGE_BY_GLOVO money m=
+ovement (same amount). Non-taxable balance. Shows as negative amount on inv=
+oice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_BY_GLOVO">=
+=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_BY_GLOVO</h3>
+<p>Delivery fee discount Glovo gives to customer (like 'Free Delivery' prom=
+otions). Taxable. In simple models (Default/BM1/BM8), comes directly from P=
+ROMOTION_DELIVERY_FEE_BY_GLOVO (same amount). In BM2/BM5, the calculation a=
+djusts for courier and promotion interactions. Appears as negative amount o=
+n customer's invoice. Example: -=E2=82=AC3.50 delivery discount sponsored b=
+y Glovo.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_TO_CUSTOMER=
+">=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_TO_CUSTOMER</h3>
+<p>Delivery fee discount shown to customer. Non-taxable balance version. In=
+ Default model, comes from partner-sponsored promotions. In BM2/BM5, repres=
+ents partner-sponsored portion after complex promotion calculations. Used i=
+n specific countries with non-taxable promotion rules. Example: -=E2=82=AC2=
+ discount appears on customer invoice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_TO_CUSTOMER=
+_TAXABLE">=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_TO_CUSTOMER_TAXABLE</h3>
+<p>Delivery fee discount shown to customer. Taxable version used in countri=
+es where promotions must be taxed. Comes from PROMOTION_DELIVERY_FEE_BY_GLO=
+VO in Default model. Example: -=E2=82=AC3.50 taxable delivery discount appe=
+ars on customer invoice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_MINIMUM_BASKET_SURCHARGE=
+_TO_CUSTOMER">=F0=9F=9F=A1 PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER</=
+h3>
+<p>Glovo gives customer a discount on minimum basket surcharge. Based on PR=
+OMOTION_MINIMUM_BASKET_SURCHARGE_BY_PARTNER. Non-taxable balance. When part=
+ner waives the fee, one money movement becomes two invoicing items: partner=
+ gets charged by Glovo, customer sees the discount.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_PRODUCT_AFFECTING_COMMIS=
+SION_TO_CUSTOMER">=F0=9F=9F=A1 PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_CU=
+STOMER</h3>
+<p>Glovo shows the customer a product discount that partner sponsored. Spli=
+ts PROMOTION_PRODUCT_AFFECTING_COMMISSION_BY_PARTNER into two invoicing ite=
+ms. Non-taxable balance. Partner pays Glovo (one invoice), customer sees di=
+scount (another invoice).</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_PRODUCT_NOT_AFFECTING_CO=
+MMISSION_TO_CUSTOMER">=F0=9F=9F=A1 PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSI=
+ON_TO_CUSTOMER</h3>
+<p>Glovo shows the customer a product discount that partner sponsored. Spli=
+ts PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSION_BY_PARTNER into two invoicing=
+ items. Non-taxable balance. Partner pays Glovo (one invoice), customer see=
+s discount (another invoice).</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_PRODUCT_TO_CUSTOMER">=F0=
+=9F=9F=A1 PROMOTION_PRODUCT_TO_CUSTOMER</h3>
+<p>Glovo gives customer a product discount (Glovo-sponsored promotion like =
+'20% off'). Comes from PROMOTION_PRODUCT_BY_GLOVO money movement (same amou=
+nt). Non-taxable balance. Shows as negative amount. Example: -=E2=82=AC10 d=
+iscount on =E2=82=AC50 order.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1REFUND_TO_CUSTOMER">=F0=9F=9F=A1 R=
+EFUND_TO_CUSTOMER</h3>
+<p>Glovo refunds the customer for order issues (missing items, quality prob=
+lems, etc.). Comes from REFUND_BY_GLOVO money movement (same amount). Non-t=
+axable balance. Example: =E2=82=AC8 refund for missing items shows on custo=
+mer's account.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1SERVICE_FEE_TO_CUSTOMER">=F0=9F=9F=
+=A1 SERVICE_FEE_TO_CUSTOMER</h3>
+<p>Platform service fee Glovo charges customer. Taxable. Only used in BM4. =
+In BM4, this replaces DELIVERY_FEE_BY_GLOVO and the amount is calculated ba=
+sed on delivery fees and courier costs (CPO). In simpler terms: customer pa=
+ys service fee instead of traditional delivery fee. Example: Customer pays =
+=E2=82=AC5 service fee to use Glovo platform.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1TIP_TO_CUSTOMER">=F0=9F=9F=A1 TIP_=
+TO_CUSTOMER</h3>
+<p>Glovo shows the customer their tip amount on the invoice/receipt. Comes =
+from TIP_BY_CUSTOMER money movement (same amount). Non-taxable balance. Exa=
+mple: Customer's receipt shows they tipped =E2=82=AC2 to the courier.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRIME_SUBSCRIPTION_TO_CUSTOMER">=
+=F0=9F=9F=A1 PRIME_SUBSCRIPTION_TO_CUSTOMER</h3>
+<p>Glovo charges customer for Prime subscription membership fee. Comes from=
+ PRIME_SUBSCRIPTION_BY_CUSTOMER money movement (same amount). Taxable. Exam=
+ple: Customer pays =E2=82=AC5.99/month for Prime membership - this is the i=
+nvoice line item.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PRIME_SUBSCRIPTION</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_PRIME_SUBSCRIPTION_TO_CU=
+STOMER">=F0=9F=9F=A1 PROMOTION_PRIME_SUBSCRIPTION_TO_CUSTOMER</h3>
+<p>Glovo gives customer a Prime subscription discount. Comes from PROMOTION=
+_PRIME_SUBSCRIPTION_BY_GLOVO money movement (same amount). Taxable. Shows a=
+s negative amount. Example: -=E2=82=AC3.00 for 50% off Prime promotion.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C CUSTOMER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PRIME_SUBSCRIPTION</code></p></li>
+</ul>
+<h2 id=3D"O2C-InvoicingItems-=F0=9F=9B=B5COURIERissuesto=F0=9F=8E=88GLOVO">=
+=F0=9F=9B=B5 COURIER issues to =F0=9F=8E=88 GLOVO</h2>
+<p>The following invoicing items are issued to <strong>GLOVO</strong> by <s=
+trong>COURIER</strong>:</p>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1CASH_COLLECTED_BY_COURIER">=F0=9F=
+=9F=A1 CASH_COLLECTED_BY_COURIER</h3>
+<p>Courier owes Glovo for cash collected from customers (cash-on-delivery o=
+rders). Comes from CASH_COLLECTED_BY_COURIER money movement (same amount). =
+Non-taxable balance. Example: Courier collected =E2=82=AC150 in cash, must =
+remit it to Glovo.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1CASH_OUT_BY_COURIER">=F0=9F=9F=A1 =
+CASH_OUT_BY_COURIER</h3>
+<p>Courier's balance is reduced for cash earnings already paid out. Comes f=
+rom CASH_OUT_BY_COURIER money movement (same amount). Non-taxable balance. =
+Example: Courier was paid =E2=82=AC200 in cash, their balance with Glovo re=
+duced by =E2=82=AC200.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1CHALLENGE_REWARD_BY_COURIER">=F0=
+=9F=9F=A1 CHALLENGE_REWARD_BY_COURIER</h3>
+<p>Courier bills Glovo for challenge reward (completing delivery goals). Co=
+mes from CHALLENGE_REWARD_TO_COURIER money movement (same amount). Taxable.=
+ Example: Courier completed 30 deliveries in a week, bills Glovo =E2=82=AC2=
+5 reward.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1EXTERNAL_EARNINGS_BONUS_BY_COURIER=
+">=F0=9F=9F=A1 EXTERNAL_EARNINGS_BONUS_BY_COURIER</h3>
+<p>Courier bills Glovo for special bonuses (exceptional performance, compen=
+sation, etc.). Comes from EXTERNAL_EARNINGS_BONUS_TO_COURIER money movement=
+ (same amount). Taxable. Example: Courier bills Glovo =E2=82=AC20 for excel=
+lent customer ratings bonus.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1FRAUD_BY_COURIER">=F0=9F=9F=A1 FRA=
+UD_BY_COURIER</h3>
+<p>Courier owes Glovo for fraudulent activities detected on their account. =
+Comes from FRAUD_BY_COURIER money movement (same amount). Non-taxable balan=
+ce. Example: Courier charged =E2=82=AC50 for fake deliveries.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1GUARANTEE_BY_COURIER">=F0=9F=9F=A1=
+ GUARANTEE_BY_COURIER</h3>
+<p>Courier bills Glovo for minimum earnings guarantee payment. Comes from G=
+UARANTEE_TO_COURIER money movement (same amount). Taxable. Example: Courier=
+ only earned =E2=82=AC40 but has =E2=82=AC60 guarantee, bills Glovo =E2=82=
+=AC20 difference.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCT_INCIDENTS_BY_COURIER">=F0=
+=9F=9F=A1 PRODUCT_INCIDENTS_BY_COURIER</h3>
+<p>Courier owes Glovo for product incidents they caused (damaged goods, wro=
+ng deliveries, etc.). Comes from PRODUCT_INCIDENTS_BY_COURIER money movemen=
+t (same amount). Non-taxable balance. Example: Courier damaged =E2=82=AC15 =
+of products, owes Glovo for it.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1REFERRAL_BY_COURIER">=F0=9F=9F=A1 =
+REFERRAL_BY_COURIER</h3>
+<p>Courier bills Glovo for referring new couriers to the platform. Comes fr=
+om REFERRAL_TO_COURIER money movement (same amount). Taxable. NET amount. E=
+xample: Courier referred a friend, bills Glovo =E2=82=AC50 referral bonus.<=
+/p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1TIP_BY_COURIER">=F0=9F=9F=A1 TIP_B=
+Y_COURIER</h3>
+<p>Courier bills Glovo for tips received. Comes from TIP_TO_COURIER money m=
+ovement (same amount). Non-taxable balance. Example: Courier received =E2=
+=82=AC3 tip, bills Glovo for it.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>COURIER_ACCOUNT_ENTRY</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1OTHER_ADJUSTMENT_BY_COURIER">=F0=
+=9F=9F=A1 OTHER_ADJUSTMENT_BY_COURIER</h3>
+<p>MANUAL IMPORT via CSV: Courier owes Glovo for various manual adjustments=
+ (fraud, product incidents, non-delivered orders, debts, etc.). Not from au=
+tomated money movements. Non-taxable balance. Used when operators need to m=
+anually adjust courier accounts for special cases.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> COURIER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1CPO_ASSUMED_BY_GLOVO">=F0=9F=9F=A1=
+ CPO_ASSUMED_BY_GLOVO</h3>
+<p>Courier bills Glovo for delivery service. Taxable. Only used in BM4 with=
+ aggregated invoicing model when courier costs exceed what customer covered=
+. Glovo pays courier, then recoups cost from partner via CPO_ASSUMED_TO_GLO=
+VO. Example: Courier invoices Glovo =E2=82=AC2 which Glovo then charges to =
+partner.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1DELIVERY_FEE_BY_COURIER">=F0=9F=9F=
+=A1 DELIVERY_FEE_BY_COURIER</h3>
+<p>Payment courier invoices to Glovo for completing a delivery. Taxable. NE=
+T amount (after tax). Amount depends on business model: In simpler models (=
+Default/BM1/BM8), it matches exactly what Glovo owes the courier from ORDER=
+_EARNINGS_TO_COURIER. In courier-direct models (BM2/BM5), it's the remainde=
+r after subtracting what the customer already paid the courier directly. BM=
+4 handles this differently. Example: Courier bills Glovo =E2=82=AC4.50 for =
+completing a delivery.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> CUSTOMER =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1ORDER_EARNINGS_BY_COURIER">=F0=9F=
+=9F=A1 ORDER_EARNINGS_BY_COURIER</h3>
+<p>Courier bills Glovo for delivery service (Cost Per Order / CPO). Taxable=
+. NET amount (after tax). Used in Default/BM1/BM8. Comes directly from ORDE=
+R_EARNINGS_TO_COURIER money movement (same amount). In other business model=
+s (BM2/BM4/BM5), courier payments are handled differently. Example: Courier=
+ invoices Glovo =E2=82=AC4.50 for completing a delivery.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h2 id=3D"O2C-InvoicingItems-=F0=9F=9B=B5COURIERissuesto=F0=9F=8F=AASTORE_A=
+DDRESS">=F0=9F=9B=B5 COURIER issues to =F0=9F=8F=AA STORE_ADDRESS</h2>
+<p>The following invoicing items are issued to <strong>STORE_ADDRESS</stron=
+g> by <strong>COURIER</strong>:</p>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1CPO_ASSUMED_BY_PARTNER">=F0=9F=9F=
+=A1 CPO_ASSUMED_BY_PARTNER</h3>
+<p>Courier bills partner directly for delivery service. Taxable. Only used =
+in BM4 with standard (non-aggregated) invoicing model when courier costs ex=
+ceed what customer covered. Partner assumes responsibility for remaining co=
+urier payment (CPO). Example: Courier bills partner =E2=82=AC2 for delivery=
+ cost not covered by customer.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C COURIER</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h2 id=3D"O2C-InvoicingItems-=F0=9F=8E=88GLOVOissuesto=F0=9F=8F=AASTORE_ADD=
+RESS">=F0=9F=8E=88 GLOVO issues to =F0=9F=8F=AA STORE_ADDRESS</h2>
+<p>The following invoicing items are issued to <strong>STORE_ADDRESS</stron=
+g> by <strong>GLOVO</strong>:</p>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_GMO_DEBIT_TO_PARTNER">=F0=9F=
+=9F=A1 MKT_GMO_DEBIT_TO_PARTNER</h3>
+<p>Glovo charges partner for advertising/marketing campaigns on the platfor=
+m. Comes from MKT_GMO_DEBIT_BY_PARTNER money movement (same amount). Taxabl=
+e. NET amount. Example: Partner pays =E2=82=AC50 for sponsored placement at=
+ top of search results for one week.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ADS_REPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_ACTIONS_TO_PARTNER">=F0=9F=9F=
+=A1 MKT_ACTIONS_TO_PARTNER</h3>
+<p>MANUAL IMPORT via CSV: Glovo charges partner for 'Marketing Actions' cam=
+paign. Not from money movements. Taxable. NET amount. Used when marketing f=
+ees can't be processed through automated flows.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_BOOST_TO_PARTNER">=F0=9F=9F=A1=
+ MKT_BOOST_TO_PARTNER</h3>
+<p>MANUAL IMPORT via CSV: Glovo charges partner for 'Marketing Boost' campa=
+ign. Not from money movements. Taxable. NET amount. Used when boost marketi=
+ng fees need manual import.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_CRM_TO_PARTNER">=F0=9F=9F=A1 M=
+KT_CRM_TO_PARTNER</h3>
+<p>MANUAL IMPORT via CSV: Glovo charges partner for 'CRM Marketing' campaig=
+n. Not from money movements. Taxable. NET amount. Used when CRM marketing f=
+ees need manual import.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_DFP_TO_PARTNER">=F0=9F=9F=A1 M=
+KT_DFP_TO_PARTNER</h3>
+<p>MANUAL IMPORT via CSV: Glovo charges partner for 'DFP - Display &amp; Fe=
+atured Products' marketing. Not from money movements. Taxable. NET amount. =
+Used when DFP marketing fees need manual import.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_KEYWORDS_TO_PARTNER">=F0=9F=9F=
+=A1 MKT_KEYWORDS_TO_PARTNER</h3>
+<p>MANUAL IMPORT via CSV: Glovo charges partner for 'Keywords Marketing' ca=
+mpaign. Not from money movements. Taxable. NET amount. Used when keyword bi=
+dding fees need manual import.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_OTHER_TO_PARTNER">=F0=9F=9F=A1=
+ MKT_OTHER_TO_PARTNER</h3>
+<p>MANUAL IMPORT via CSV: Glovo charges partner for 'Other Marketing' campa=
+igns not covered by other categories. Not from money movements. Taxable. NE=
+T amount. Catch-all for miscellaneous marketing fees.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_POSITIONING_TO_PARTNER">=F0=9F=
+=9F=A1 MKT_POSITIONING_TO_PARTNER</h3>
+<p>MANUAL IMPORT via CSV: Glovo charges partner for 'Positioning/Placement'=
+ marketing (premium placements on the app). Not from money movements. Taxab=
+le. NET amount. Partner pays for better positioning in app.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MKT_SEARCH_TO_PARTNER">=F0=9F=9F=
+=A1 MKT_SEARCH_TO_PARTNER</h3>
+<p>MANUAL IMPORT via CSV: Glovo charges partner for 'Search Marketing' camp=
+aign (better search rankings). Not from money movements. Taxable. NET amoun=
+t. Partner pays to appear higher in search results.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>MANUAL_IMPORT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1BAD_WEATHER_SURCHARGE_TO_PARTNER">=
+=F0=9F=9F=A1 BAD_WEATHER_SURCHARGE_TO_PARTNER</h3>
+<p>Glovo pays the partner the bad weather surcharge that was collected from=
+ customer. Comes from BAD_WEATHER_SURCHARGE_TO_PARTNER money movement (same=
+ amount). Non-taxable balance. Partner receives the bad weather fee.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1BAD_WEATHER_SURCHARGE_TO_PARTNER_T=
+AXABLE">=F0=9F=9F=A1 BAD_WEATHER_SURCHARGE_TO_PARTNER_TAXABLE</h3>
+<p>Glovo pays the partner the bad weather surcharge that was collected from=
+ customer. Comes from BAD_WEATHER_SURCHARGE_TO_PARTNER money movement (same=
+ amount). Food VAT is applied for VAT optimisation. Partner receives the ba=
+d weather fee.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1COMMISSION_TO_PARTNER">=F0=9F=9F=
+=A1 COMMISSION_TO_PARTNER</h3>
+<p>Commission fee Glovo charges partner for facilitating the sale. Taxable.=
+ NET amount (after tax). Comes directly from COMMISSION_BY_PARTNER money mo=
+vement (same amount) across all business models. In BM4 with partner, this =
+commission may be partially offset by courier costs. Example: Partner pays =
+Glovo =E2=82=AC7.50 commission (15% of =E2=82=AC50 sales).</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1CPO_ASSUMED_TO_GLOVO">=F0=9F=9F=A1=
+ CPO_ASSUMED_TO_GLOVO</h3>
+<p>Fee Glovo charges partner for courier delivery costs. Taxable. Only used=
+ in BM4 with aggregated invoicing model when courier costs exceed what cust=
+omer covered. Glovo pays the courier, then bills partner for the remaining =
+amount. Example: Glovo invoices partner =E2=82=AC2 for uncovered courier co=
+sts.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1FLASH_DEAL_FEE_FROM_GLOVO_TO_PARTN=
+ER">=F0=9F=9F=A1 FLASH_DEAL_FEE_FROM_GLOVO_TO_PARTNER</h3>
+<p>Glovo charges partner for featuring products in flash deals (limited-tim=
+e promotions). Comes from FLASH_DEAL_FEE_FROM_PARTNER_TO_GLOVO money moveme=
+nt (same amount). Taxable. Example: Partner pays =E2=82=AC5 to feature prod=
+ucts in 2-hour flash deal.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1FLASH_DEAL_PROMOTION_FROM_GLOVO_TO=
+_PARTNER">=F0=9F=9F=A1 FLASH_DEAL_PROMOTION_FROM_GLOVO_TO_PARTNER</h3>
+<p>Glovo charges partner for the flash deal discount given to customers. Co=
+mes from FLASH_DEAL_PROMOTION_FROM_PARTNER_TO_CUSTOMER money movement (same=
+ amount). Non-taxable balance. Partner pays Glovo for the 30% off they offe=
+red customers.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1GLOVO_BALANCE_DISCOUNT_TO_PARTNER"=
+>=F0=9F=9F=A1 GLOVO_BALANCE_DISCOUNT_TO_PARTNER</h3>
+<p>Discount Glovo gives partner when commission minus courier costs results=
+ in negative amount. Taxable. Only used in BM4 with aggregated invoicing mo=
+del. When courier costs exceed the commission partner owes, the difference =
+becomes a credit to the partner. Example: -=E2=82=AC3 balance discount on p=
+artner invoice.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1GLOVO_BALANCE_VOUCHER_TO_PARTNER">=
+=F0=9F=9F=A1 GLOVO_BALANCE_VOUCHER_TO_PARTNER</h3>
+<p>Credit Glovo gives partner when commission minus courier costs results i=
+n negative amount. Non-taxable balance. Only used in BM4 with standard (non=
+-aggregated) invoicing model. Similar to GLOVO_BALANCE_DISCOUNT_TO_PARTNER =
+but non-taxable version. Example: -=E2=82=AC3 voucher credit to partner bal=
+ance.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1INCIDENT_COMMISSION_TO_PARTNER">=
+=F0=9F=9F=A1 INCIDENT_COMMISSION_TO_PARTNER</h3>
+<p>Glovo credits partner a commission adjustment due to order incident. Com=
+es from INCIDENT_COMMISSION_BY_PARTNER money movement (same amount). Taxabl=
+e. NET amount. Shows as negative amount crediting partner. Example: =E2=82=
+=AC2 commission refund due to incident.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1INCIDENT_PRODUCTS_AFFECTING_COMMIS=
+SION_TO_PARTNER">=F0=9F=9F=A1 INCIDENT_PRODUCTS_AFFECTING_COMMISSION_TO_PAR=
+TNER</h3>
+<p>Glovo pays partner for replacement products added due to incidents (DOES=
+ affect commission). Comes from INCIDENT_PRODUCTS_AFFECTING_COMMISSION_BY_P=
+ARTNER money movement (same amount). Non-taxable balance. Example: Partner =
+adds =E2=82=AC5 replacement, commission calculated on higher amount.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1INCIDENT_PRODUCTS_NOT_AFFECTING_CO=
+MMISSION_TO_PARTNER">=F0=9F=9F=A1 INCIDENT_PRODUCTS_NOT_AFFECTING_COMMISSIO=
+N_TO_PARTNER</h3>
+<p>Glovo pays partner for replacement products added due to incidents (does=
+ NOT affect commission). Comes from INCIDENT_PRODUCTS_NOT_AFFECTING_COMMISS=
+ION_BY_PARTNER money movement (same amount). Non-taxable balance. Example: =
+Partner adds =E2=82=AC5 replacement items as goodwill, commission stays sam=
+e.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MINIMUM_BASKET_SURCHARGE_TO_PARTNE=
+R">=F0=9F=9F=A1 MINIMUM_BASKET_SURCHARGE_TO_PARTNER</h3>
+<p>Glovo pays the partner the minimum basket surcharge that was collected f=
+rom customer. Comes from MINIMUM_BASKET_SURCHARGE_TO_PARTNER money movement=
+ (same amount). Non-taxable balance. Partner receives the surcharge fee.</p=
+>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MINIMUM_BASKET_SURCHARGE_TO_PARTNE=
+R_TAXABLE">=F0=9F=9F=A1 MINIMUM_BASKET_SURCHARGE_TO_PARTNER_TAXABLE</h3>
+<p>Glovo pays the partner the minimum basket surcharge that was collected f=
+rom customer. Comes from MINIMUM_BASKET_SURCHARGE_TO_PARTNER money movement=
+ (same amount). Food VAT is applied and introduced to the commission calcul=
+ation for VAT optimisation. Partner receives the surcharge fee.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MPL_DELIVERY_FEE_TO_PARTNER">=F0=
+=9F=9F=A1 MPL_DELIVERY_FEE_TO_PARTNER</h3>
+<p>Payment Glovo makes to partner for handling their own delivery. Non-taxa=
+ble balance. Comes from DELIVERY_FEE_TO_PARTNER money movement (same amount=
+). Used in marketplace model when partner handles delivery instead of Glovo=
+ couriers - partner receives the delivery fee collected from customer. Exam=
+ple: Partner receives =E2=82=AC3 for handling delivery themselves.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MPL_DELIVERY_FEE_TO_PARTNER_TAXABL=
+E">=F0=9F=9F=A1 MPL_DELIVERY_FEE_TO_PARTNER_TAXABLE</h3>
+<p>Payment Glovo makes to partner for handling their own delivery. Apply fo=
+od tax. For Gen2 orders to vat optimise</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRIME_ORDER_VENDOR_FEE_FROM_GLOVO_=
+TO_PARTNER">=F0=9F=9F=A1 PRIME_ORDER_VENDOR_FEE_FROM_GLOVO_TO_PARTNER</h3>
+<p>Glovo charges partner a Prime order vendor fee. Comes from PRIME_ORDER_V=
+ENDOR_FEE_FROM_PARTNER_TO_GLOVO money movement (same amount). Taxable. Part=
+ners pay this fee when orders come from Glovo Prime members. Example: =E2=
+=82=AC0.50 fee per Prime order.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_PAID_IN_CASH_BY_CUSTOMER_=
+REDUCE_BALANCE_TO_PARTNER">=F0=9F=9F=A1 PRODUCTS_PAID_IN_CASH_BY_CUSTOMER_R=
+EDUCE_BALANCE_TO_PARTNER</h3>
+<p>Glovo reduces partner's balance when customer paid in cash directly to p=
+artner. Comes from PRODUCTS_IN_CASH_BY_CUSTOMER_REDUCE_BALANCE_BY_PARTNER m=
+oney movement (same amount). Non-taxable balance. Since partner received ca=
+sh, we reduce what Glovo owes them.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_PAID_IN_CASH_BY_GLOVO_RED=
+UCE_BALANCE_TO_PARTNER">=F0=9F=9F=A1 PRODUCTS_PAID_IN_CASH_BY_GLOVO_REDUCE_=
+BALANCE_TO_PARTNER</h3>
+<p>Glovo reduces partner's balance when Glovo paid them in cash. Comes from=
+ PRODUCTS_IN_CASH_BY_GLOVO_REDUCE_BALANCE_BY_PARTNER money movement (same a=
+mount). Non-taxable balance. Courier delivered cash to partner on Glovo's b=
+ehalf.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_PAID_IN_CASH_REDUCE_BALAN=
+CE_TO_PARTNER">=F0=9F=9F=A1 PRODUCTS_PAID_IN_CASH_REDUCE_BALANCE_TO_PARTNER=
+</h3>
+<p>DEPRECATED. Glovo reduces partner's balance when customer paid in cash. =
+Comes from PRODUCTS_IN_CASH_BY_CUSTOMER_REDUCE_BALANCE_BY_PARTNER money mov=
+ement. Non-taxable balance. Customer gave cash directly to partner, so we r=
+educe what Glovo owes them.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_PAID_WITH_VOUCHER_REDUCE_=
+BALANCE_TO_PARTNER">=F0=9F=9F=A1 PRODUCTS_PAID_WITH_VOUCHER_REDUCE_BALANCE_=
+TO_PARTNER</h3>
+<p>Glovo reduces partner's balance when customer used a voucher/gift card. =
+Comes from PRODUCTS_PAID_WITH_VOUCHER_REDUCE_BALANCE_BY_PARTNER money movem=
+ent (same amount). Non-taxable balance. Glovo redeemed the voucher, so part=
+ner owes Glovo that amount.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_REFUND_AFFECTING_COMMISSI=
+ON_TO_PARTNER">=F0=9F=9F=A1 PRODUCTS_REFUND_AFFECTING_COMMISSION_TO_PARTNER=
+</h3>
+<p>Glovo charges partner for a product refund that affects commission. Come=
+s from PRODUCTS_REFUND_AFFECTING_COMMISSION_BY_PARTNER money movement (same=
+ amount). Non-taxable balance. Partner pays for refund AND commission gets =
+reduced. Example: =E2=82=AC5 refund reduces partner earnings and commission=
+.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_REFUND_NOT_AFFECTING_COMM=
+ISSION_TO_PARTNER">=F0=9F=9F=A1 PRODUCTS_REFUND_NOT_AFFECTING_COMMISSION_TO=
+_PARTNER</h3>
+<p>Glovo charges partner for a product refund that does NOT affect commissi=
+on. Comes from PRODUCTS_REFUND_NOT_AFFECTING_COMMISSION_BY_PARTNER money mo=
+vement (same amount). Non-taxable balance. Partner pays for refund but comm=
+ission calculated on original amount.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PRODUCTS_TO_PARTNER">=F0=9F=9F=A1 =
+PRODUCTS_TO_PARTNER</h3>
+<p>Glovo pays the partner for products sold. Comes from PRODUCTS_TO_PARTNER=
+ money movement (same amount). Non-taxable balance. Example: Restaurant sel=
+ls =E2=82=AC45 worth of food through Glovo, this is the invoice showing Glo=
+vo paying them.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_TO_PARTNER"=
+>=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_TO_PARTNER</h3>
+<p>Fee Glovo charges partner for a delivery promotion the partner sponsored=
+. Non-taxable balance. Comes from PROMOTION_DELIVERY_FEE_BY_PARTNER money m=
+ovement (same amount). Used in BM2/BM5. Example: Partner offered 'free deli=
+very' to attract customers, so Glovo invoices them =E2=82=AC3 for that disc=
+ount.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_DELIVERY_FEE_TO_PARTNER_=
+TAXABLE">=F0=9F=9F=A1 PROMOTION_DELIVERY_FEE_TO_PARTNER_TAXABLE</h3>
+<p>Fee Glovo charges partner for a delivery promotion the partner sponsored=
+. Taxable version used in countries where promotions must be taxed. Comes f=
+rom PROMOTION_DELIVERY_FEE_BY_PARTNER money movement (same amount). Used in=
+ BM2/BM5. Example: Partner offered 'free delivery', Glovo invoices them =E2=
+=82=AC3 as taxable service.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_MINIMUM_BASKET_SURCHARGE=
+_TO_PARTNER">=F0=9F=9F=A1 PROMOTION_MINIMUM_BASKET_SURCHARGE_TO_PARTNER</h3=
+>
+<p>Glovo charges the partner for waiving the minimum basket surcharge (part=
+ner-sponsored). Comes from PROMOTION_MINIMUM_BASKET_SURCHARGE_BY_PARTNER mo=
+ney movement (same amount). Non-taxable balance. Partner pays to waive the =
+=E2=82=AC3 surcharge for their customers.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_PRODUCT_AFFECTING_COMMIS=
+SION_TO_PARTNER">=F0=9F=9F=A1 PROMOTION_PRODUCT_AFFECTING_COMMISSION_TO_PAR=
+TNER</h3>
+<p>Glovo charges partner for a product discount the partner sponsored (affe=
+cts commission calculation). Comes from PROMOTION_PRODUCT_AFFECTING_COMMISS=
+ION_BY_PARTNER money movement (same amount). Non-taxable balance. Partner p=
+ays for the discount AND pays less commission.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PROMOTION_PRODUCT_NOT_AFFECTING_CO=
+MMISSION_TO_PARTNER">=F0=9F=9F=A1 PROMOTION_PRODUCT_NOT_AFFECTING_COMMISSIO=
+N_TO_PARTNER</h3>
+<p>Glovo charges partner for a product discount the partner sponsored (does=
+ NOT affect commission). Comes from PROMOTION_PRODUCT_NOT_AFFECTING_COMMISS=
+ION_BY_PARTNER money movement (same amount). Non-taxable balance. Partner p=
+ays for discount but still pays full commission.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1SERVICE_FEE_PAID_IN_CASH_TO_PARTNE=
+R">=F0=9F=9F=A1 SERVICE_FEE_PAID_IN_CASH_TO_PARTNER</h3>
+<p>Glovo charges partner when customer paid service fee in cash to partner.=
+ Comes from SERVICE_FEE_PAID_IN_CASH_REDUCE_BALANCE_BY_PARTNER money moveme=
+nt (same amount). Non-taxable balance. Reduces partner's balance with Glovo=
+ since they received cash directly.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>GROSS</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1WAITING_TIME_FEE_TAXABLE_REFUND_TO=
+_PARTNER">=F0=9F=9F=A1 WAITING_TIME_FEE_TAXABLE_REFUND_TO_PARTNER</h3>
+<p>Glovo refunds partner a waiting time fee that was charged incorrectly. C=
+omes from WAITING_TIME_FEE_TAXABLE_REFUND_TO_PARTNER money movement (same a=
+mount). Taxable. NET amount. Shows as negative amount crediting partner. Ex=
+ample: -=E2=82=AC2 refund.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> GLOVO =E2=9E=9C STORE_ADDRESS</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1WAITING_TIME_FEE_TO_PARTNER">=F0=
+=9F=9F=A1 WAITING_TIME_FEE_TO_PARTNER</h3>
+<p>Glovo charges partner a waiting time fee (taxable version). From WAITING=
+_TIME_FEE_BY_PARTNER money movement, tax treatment varies by country. Taxab=
+le. NET amount. Used in countries where this fee must be taxed. Example: =
+=E2=82=AC2 fee when courier waited 15 extra minutes.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1WAITING_TIME_FEE_TO_PARTNER_NON_TA=
+XABLE">=F0=9F=9F=A1 WAITING_TIME_FEE_TO_PARTNER_NON_TAXABLE</h3>
+<p>Glovo charges partner a waiting time fee (non-taxable version). From WAI=
+TING_TIME_FEE_BY_PARTNER money movement, tax treatment varies by country. N=
+on-taxable balance. NET amount. Used in countries where this fee is not tax=
+ed.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>ORDER</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1MATERIAL_FEE_TO_PARTNER">=F0=9F=9F=
+=A1 MATERIAL_FEE_TO_PARTNER</h3>
+<p>Glovo charges partner for materials and supplies provided (packaging, br=
+anded materials, etc.). Comes from MATERIAL_FEE_BY_PARTNER money movement (=
+same amount). Taxable. NET amount. Example: =E2=82=AC50 for branded packagi=
+ng materials.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PARTNER_FEES</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1PLATFORM_FEE_TO_PARTNER">=F0=9F=9F=
+=A1 PLATFORM_FEE_TO_PARTNER</h3>
+<p>Glovo charges partner a platform usage fee for using Glovo's infrastruct=
+ure. Comes from PLATFORM_FEE_BY_PARTNER money movement (same amount). Taxab=
+le. NET amount. Example: =E2=82=AC10 monthly fee for using Glovo's ordering=
+ system.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PARTNER_FEES</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1SALES_FEE_TO_PARTNER">=F0=9F=9F=A1=
+ SALES_FEE_TO_PARTNER</h3>
+<p>Glovo charges partner a sales-based fee (separate from commission). Come=
+s from SALES_FEE_BY_PARTNER money movement (same amount). Taxable. NET amou=
+nt. Example: Partner pays =E2=82=AC20 for 2% sales fee on =E2=82=AC1,000 mo=
+nthly volume.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PARTNER_FEES</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1SANCTIONS_TO_PARTNER">=F0=9F=9F=A1=
+ SANCTIONS_TO_PARTNER</h3>
+<p>Glovo charges partner a sanction/penalty for policy violations or qualit=
+y issues. Comes from SANCTIONS_BY_PARTNER money movement (same amount). Tax=
+able. NET amount. Example: =E2=82=AC100 sanction for repeated late order pr=
+eparation.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PARTNER_FEES</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1INSTANT_PAYOUTS_ALREADY_PAID_TO_PA=
+RTNER">=F0=9F=9F=A1 INSTANT_PAYOUTS_ALREADY_PAID_TO_PARTNER</h3>
+<p>Glovo records the instant payout amount already transferred to partner, =
+reducing their balance. Comes from INSTANT_PAYOUTS_ALREADY_PAID_TO_PARTNER =
+money movement (same amount). Non-taxable balance. NET amount. Example: Par=
+tner received =E2=82=AC500, their balance with Glovo reduced by =E2=82=AC50=
+0.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>NON_TAXABLE_BALANCE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PAYOUT</code></p></li>
+</ul>
+<h3 id=3D"O2C-InvoicingItems-=F0=9F=9F=A1INSTANT_PAYOUTS_FEE_TO_PARTNER">=
+=F0=9F=9F=A1 INSTANT_PAYOUTS_FEE_TO_PARTNER</h3>
+<p>Glovo charges partner a fee for instant payout service (getting money im=
+mediately instead of waiting for regular payout). Comes from INSTANT_PAYOUT=
+S_FEE_BY_PARTNER money movement (same amount). Taxable. NET amount. Example=
+: Partner pays =E2=82=AC5 fee to get their =E2=82=AC500 immediately.</p>
+<ul>
+<li>
+<p><strong>Money Flow:</strong> STORE_ADDRESS =E2=9E=9C GLOVO</p></li>
+<li>
+<p><strong>Taxation:</strong> <code>TAXABLE</code></p></li>
+<li>
+<p><strong>Amount Type:</strong> <code>NET</code></p></li>
+<li>
+<p><strong>Source:</strong> <code>PAYOUT</code></p></li>
+</ul>
+    </div>
+</body>
+</html>
+------=_Part_8_503015528.1762332190489--
