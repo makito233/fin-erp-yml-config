@@ -6,6 +6,7 @@ A beautiful and intuitive graphical interface for configuring SAP order payload 
 
 - 📝 **Visual Editor**: Edit field mappings and condition mappings with an intuitive UI
 - 🎯 **Bubble Expression Builder**: Build expressions with autocomplete and visual bubbles/pills
+- 🔧 **SpEL Expression Support**: Full support for Spring Expression Language (SpEL) with safe navigation and Elvis operators
 - 📚 **Reference Data**: Complete catalog of all valid Money Movements and Invoicing Items with descriptions and tooltips
 - 🎛️ **Input Manager**: Automatically extracts all input variables from expressions for centralized configuration
 - 🧪 **Payload Simulator**: Test your configuration with real values and see the generated payload
@@ -15,6 +16,7 @@ A beautiful and intuitive graphical interface for configuring SAP order payload 
 - 👁️ **YAML Preview**: Preview formatted output before exporting to ensure correctness
 - 🎨 **Modern UI**: Built with Tailwind CSS and Headless UI for a beautiful, accessible interface
 - 📦 **Array Fields**: Special support for array fields with nested item mappings
+- 🚀 **Microservice-Ready**: Converter logic extracted into standalone module for easy microservice deployment
 
 ## Prerequisites
 
@@ -272,13 +274,16 @@ fin-erp-yml-config/
 │   │   ├── ConditionMappingsEditor.jsx     # Condition mappings editor
 │   │   ├── ExpressionsByCountryEditor.jsx  # Country expressions editor
 │   │   ├── FieldMappingsEditor.jsx         # Field mappings editor
-│   │   ├── VisualExpressionBuilder.jsx     # Drag & drop expression builder
+│   │   ├── VisualExpressionBuilder.jsx     # SpEL-aware expression builder
 │   │   ├── InputManager.jsx                # Input variables manager
 │   │   ├── PayloadSimulator.jsx            # Payload testing simulator
 │   │   ├── YamlPreview.jsx                 # YAML preview modal
 │   │   └── ReferenceData.jsx               # Money Movements & Invoicing Items reference
+│   ├── services/
+│   │   ├── yamlConverterService.js         # 🚀 Microservice-ready YAML converter
+│   │   └── README.md                       # Service documentation & migration guide
 │   ├── utils/
-│   │   ├── expressionParser.js             # Extracts variables from expressions
+│   │   ├── expressionParser.js             # Extracts SpEL variables from expressions
 │   │   └── yamlFormatter.js                # YAML formatting utilities
 │   ├── data/
 │   │   └── referenceData.js                # Money Movements & Invoicing Items catalog
@@ -287,9 +292,12 @@ fin-erp-yml-config/
 │   └── index.css                            # Global styles with Tailwind
 ├── index.html                               # HTML template
 ├── package.json                             # Dependencies
-├── vite.config.js                           # Vite configuration
+├── vite.config.js                           # Vite configuration (GitHub Pages ready)
 ├── tailwind.config.js                       # Tailwind CSS configuration
-└── postcss.config.js                        # PostCSS configuration
+├── postcss.config.js                        # PostCSS configuration
+├── SPEL_GUIDE.md                            # 📖 Complete SpEL syntax reference
+├── MICROSERVICE_API.md                      # 🚀 REST API specification for microservice
+└── DEPLOYMENT_INSTRUCTIONS.md               # GitHub Pages deployment guide
 ```
 
 ## Technologies Used
@@ -313,16 +321,46 @@ The editor supports the following field types:
 - `optional_local_date_time`: Optional date-time with custom format
 - `array`: Array of objects with nested item mappings
 
-## Expression Syntax
+## Expression Syntax (SpEL)
 
-Expressions use Spring Expression Language (SpEL) syntax:
+All expressions use **Spring Expression Language (SpEL)** syntax. See **[SPEL_GUIDE.md](SPEL_GUIDE.md)** for complete reference.
 
-- Access input fields: `#input.orderMetadata.orderCode`
-- Conditional expressions: `condition ? value1 : value2`
-- Map lookups: `{ 'key1': value1, 'key2': value2 }[#input.field]`
-- Null safety: `#field?.property`
-- String operations: `"prefix " + #variable`
-- Numeric operations: `(#field1 + #field2) * 1.5`
+**Common patterns:**
+
+- Variable reference: `#input.orderMetadata.orderCode`
+- Safe navigation: `#invoicingItems['ITEM']?.grossAmount?.value`
+- Elvis operator (default): `#value ?: 0`
+- Ternary conditional: `#condition ? value1 : value2`
+- Map lookups: `{ 'GEN1': 'Restaurant', 'GEN2': 'Glovo' }[#input.handlingStrategy]`
+- Method calls: `#input.orderId.toString()`
+- Arithmetic: `(#value1 + #value2) * 1.5`
+
+**SpEL Features:**
+- ✅ Null-safe navigation with `?.`
+- ✅ Default values with `?:`
+- ✅ Method invocations
+- ✅ Map/Collection literals
+- ✅ Arithmetic & logical operations
+- ✅ Type-safe conversions
+
+See the Visual Expression Builder for SpEL-aware autocomplete and syntax help.
+
+## Microservice Architecture
+
+The YAML conversion logic has been extracted into a framework-agnostic module that can be deployed as a standalone microservice. This allows for:
+
+- **Centralized Logic**: Update conversion rules in one place
+- **Backend Validation**: Validate configurations server-side
+- **Scalability**: Process large configurations without frontend limitations
+- **Security**: Keep sensitive logic on the backend
+
+**Documentation:**
+- **[src/services/README.md](src/services/README.md)** - Module documentation and migration guide
+- **[MICROSERVICE_API.md](MICROSERVICE_API.md)** - Complete REST API specification
+- **[SPEL_GUIDE.md](SPEL_GUIDE.md)** - SpEL syntax reference
+
+**Current State:** Frontend-only (no backend required)  
+**Future State:** Can be migrated to use backend microservice
 
 ## Tips
 
@@ -331,6 +369,8 @@ Expressions use Spring Expression Language (SpEL) syntax:
 - The interface preserves all YAML comments when exporting
 - You can have multiple expression groups for different country combinations
 - Array fields allow full nesting of item mappings
+- Hover over expression builder blocks to see SpEL syntax hints
+- Use the SpEL Quick Reference in the expression builder for syntax help
 
 ## Troubleshooting
 

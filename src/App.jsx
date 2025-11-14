@@ -12,6 +12,7 @@ import PayloadSimulator from './components/PayloadSimulator'
 import YamlPreview from './components/YamlPreview'
 import InputManager from './components/InputManager'
 import ReferenceData from './components/ReferenceData'
+import yamlConverterService from './services/yamlConverterService'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -46,7 +47,11 @@ function App() {
 
   const handlePreviewYaml = () => {
     try {
-      const yamlContent = generateFormattedYaml(config)
+      // Use the YAML converter service
+      const yamlContent = yamlConverterService.toYaml(config, {
+        includeComments: true,
+        includeHeader: true
+      })
       setPreviewContent(yamlContent)
       setShowPreview(true)
     } catch (error) {
@@ -56,8 +61,11 @@ function App() {
 
   const handleExportYaml = () => {
     try {
-      // Create custom YAML output with proper formatting
-      let yamlContent = previewContent || generateFormattedYaml(config)
+      // Create custom YAML output with proper formatting using the converter service
+      let yamlContent = previewContent || yamlConverterService.toYaml(config, {
+        includeComments: true,
+        includeHeader: true
+      })
       
       const blob = new Blob([yamlContent], { type: 'text/yaml' })
       const url = URL.createObjectURL(blob)
@@ -73,7 +81,16 @@ function App() {
     }
   }
 
+  // Legacy method for backward compatibility - now uses converter service
   const generateFormattedYaml = (config) => {
+    return yamlConverterService.toYaml(config, {
+      includeComments: true,
+      includeHeader: true
+    })
+  }
+
+  // Old implementation kept for reference (can be removed after migration)
+  const generateFormattedYamlOld = (config) => {
     let output = ''
     
     // Add header comments
@@ -198,6 +215,7 @@ function App() {
     
     return output
   }
+  // End of old implementation
 
   return (
     <div className="min-h-screen bg-gray-50">
